@@ -7,19 +7,15 @@ interface pack {
   subdomain: string;
 }
 
-interface packs {
+interface Props {
   packs: pack[];
 }
 
-const DropMenu: FC<packs> = ({ packs }) => {
+const DropMenu: FC<Props> = ({ packs }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   const actionMenu = () => {
-    if (showMenu) {
-      return setShowMenu(false);
-    } else {
-      return setShowMenu(true);
-    }
+    return setShowMenu(!showMenu);
   };
 
   return (
@@ -34,7 +30,7 @@ const DropMenu: FC<packs> = ({ packs }) => {
         </a>
       </div>
       <div className={showMenu ? styles._content : styles._hidden}>
-        {packs?.map((pack) => (
+        {packs?.map((pack, index) => (
           <div key={pack.name} className={styles._packs}>
             <a
               href={`https://${pack.subdomain}.bananacreative.io`}
