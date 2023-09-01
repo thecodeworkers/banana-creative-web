@@ -1,0 +1,96 @@
+@import "../../../public/styles/index.scss";
+
+._menu {
+  margin: 1.138rem 0 1.138rem 1.138rem;
+}
+
+._dropMenu {
+  border-radius: 0.1875rem;
+  border: 0.03125rem solid $white;
+  background: $black;
+  height: fit-content;
+  position: relative;
+  top: 4.5rem;
+  padding-top: 0.6rem;
+  animation: fadeIn 0.2s ease-in;
+  height: fit-content;
+}
+
+._title {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+._content {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+._packs {
+  margin: 1rem;
+}
+
+._chevronDown {
+  margin-left: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+._chevronUp {
+  margin-left: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+._hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+
+@include responsive(lg) {
+  ._menu {
+    margin: 0;
+    color: $gallery;
+    font-size: $helvetica16;
+    font-family: $helvetica;
+  }
+
+  ._dropMenu {
+    border-radius: 0;
+    border: none;
+    top: 0;
+    padding-top: 0;
+    border-bottom: 1px solid $gray;
+    color: $gallery;
+    font-size: $helvetica16;
+    font-family: $helvetica;
+  }
+
+  ._title {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    border-bottom: 1px solid $gray;
+    margin-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  ._chevronDown {
+    grid-column: 12;
+  }
+
+  ._chevronUp {
+    grid-column: 12;
+  }
+
+  ._packs {
+    margin: 1rem 0;
+  }
+}

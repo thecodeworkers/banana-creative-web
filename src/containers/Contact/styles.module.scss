@@ -1,0 +1,247 @@
+@import '../../../public/styles/index.scss';
+
+._main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 65vh;
+  overflow: hidden;
+  
+}
+
+._content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: inherit;
+}
+
+._textBox {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+}
+
+
+._title {
+  font-size: $helvetica90;
+  color: $footerWhite;
+  font-family: $helvetica;
+  margin-bottom: 1rem;
+  width: 80%;
+
+  & span {
+    color: $heliotrope;
+    font-size: $helvetica90;
+    font-family: $helvetica;
+  }
+
+}
+
+._text,
+._goBack {
+  font-size: $helvetica16;
+  color: $footerWhite;
+  margin-top: 0.5rem;
+  font-family: $helvetica;
+  width: 70%;
+}
+
+._textContainer {
+  width: 100%;
+}
+
+._goBack {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+._buttonContainer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+._formContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-direction: column;
+  width: 50%;
+}
+
+._form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+}
+
+._input {
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+._haveProjectWrapper {
+  height: 100%;
+  background-color: $footerBlack;
+ padding-top: 4rem;
+  justify-content: space-between;
+}
+
+._haveProject,
+._haveProjectWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+._animationHaveProjectWrapper {
+  width: 100vw;
+  height: inherit;
+  position: absolute;
+  left: 0;
+
+}
+
+._animationFormWrapper {
+  width: 100vw;
+  height: inherit;
+  position: absolute;
+  left: 100vw;
+  padding-bottom: 2rem;
+  background-color: $footerBlack;
+  padding-top: 4rem;
+}
+
+._formWrapper {
+  display: flex;
+  max-width: $max-width;
+  margin: 0 auto;
+  margin-top: -2rem;
+}
+
+._haveProjectText {
+  font-family: $helvetica;
+  font-size: $helvetica90;
+  color: $footerWhite;
+}
+
+._haveProjectButtons {
+  display: flex;
+  width: 45%;
+  margin-top: 4.875rem;
+  justify-content: space-around;
+}
+
+._textResponsive {
+  display: none;
+}
+
+@include responsive(lg) {
+  ._content {
+    flex-direction: column;
+  }
+
+  ._textBox {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  ._title {
+    width: 250px;
+    font-size: 3rem;
+    text-align: flex-start;
+    font-size: $helvetica40;
+  
+  }
+
+
+  ._formContainer {
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ._form {
+    width: inherit;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2.5%;
+
+  }
+
+  ._haveProjectText {
+    font-size: $helvetica40;
+    width: 70%;
+    text-align: center;
+  }
+
+  ._animationFormWrapper {
+    right: 0;
+    padding: 0 1.5rem;
+  }
+
+  ._animationHaveProjectWrapper {
+    left: 0;
+  }
+
+  ._haveProjectButtons {
+    flex-direction: column;
+  }
+
+  ._button {
+    margin: 1rem 0;
+
+  }
+
+  ._textResponsive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $footerWhite;
+    margin-top: 0.5rem;
+    font-family: $helvetica;
+    font-size: $helvetica14;
+    line-height: 1rem
+  }
+
+  ._text,
+  ._goBack {
+    font-size: $helvetica14;
+    margin-bottom: 1rem;
+  }
+
+  ._text {
+    display: none;
+  }
+
+  ._formWrapper {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  ._buttonContainer {
+    margin-bottom: 2rem;
+  }
+
+  ._haveProjectButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+}
