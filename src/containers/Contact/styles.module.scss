@@ -1,4 +1,4 @@
-@import '../../../public/styles/index.scss';
+@import "../../../public/styles/index.scss";
 
 ._main {
   width: 100%;
@@ -7,7 +7,6 @@
   justify-content: center;
   height: 65vh;
   overflow: hidden;
-  
 }
 
 ._content {
@@ -27,7 +26,6 @@
   height: 100%;
 }
 
-
 ._title {
   font-size: $helvetica90;
   color: $footerWhite;
@@ -40,7 +38,6 @@
     font-size: $helvetica90;
     font-family: $helvetica;
   }
-
 }
 
 ._text,
@@ -94,7 +91,7 @@
 ._haveProjectWrapper {
   height: 100%;
   background-color: $footerBlack;
- padding-top: 4rem;
+  padding-top: 4rem;
   justify-content: space-between;
 }
 
@@ -112,7 +109,6 @@
   height: inherit;
   position: absolute;
   left: 0;
-
 }
 
 ._animationFormWrapper {
@@ -150,6 +146,10 @@
 }
 
 @include responsive(lg) {
+  ._main {
+    height: 35rem;
+  }
+
   ._content {
     flex-direction: column;
   }
@@ -164,9 +164,7 @@
     font-size: 3rem;
     text-align: flex-start;
     font-size: $helvetica40;
-  
   }
-
 
   ._formContainer {
     margin-top: 1rem;
@@ -180,7 +178,10 @@
     justify-content: center;
     align-items: center;
     margin: 0 2.5%;
+  }
 
+  ._haveProject{
+    height: fit-content;
   }
 
   ._haveProjectText {
@@ -204,7 +205,6 @@
 
   ._button {
     margin: 1rem 0;
-
   }
 
   ._textResponsive {
@@ -215,7 +215,7 @@
     margin-top: 0.5rem;
     font-family: $helvetica;
     font-size: $helvetica14;
-    line-height: 1rem
+    line-height: 1rem;
   }
 
   ._text,
@@ -242,6 +242,4 @@
     justify-content: center;
     align-items: center;
   }
-
-
 }

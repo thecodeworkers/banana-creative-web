@@ -42,7 +42,7 @@ export default function Home() {
 
       <Navbar data={data?.navbar} refs={refs}/>
 
-      <h1 style={{color: "white", paddingTop: '13rem'}}>{t("welcome")}</h1>
+      <h1 style={{color: "white", paddingTop: '20rem'}}>{t("welcome")}</h1>
 
       <main className={styles._main}>
         <Contact  {...data?.contactUs} {...data?.general} ref={contactRef} />
