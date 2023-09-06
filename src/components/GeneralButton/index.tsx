@@ -1,8 +1,8 @@
-import React, { FC } from "react";
-import styles from "./styles.module.scss";
-import { motion, Variants } from "framer-motion";
-import { Icon } from "@iconify/react";
-import scss from "../../../public/styles/variables.module.scss";
+import React, { FC } from 'react';
+import styles from './styles.module.scss';
+import { motion, Variants } from 'framer-motion';
+import { Icon } from '@iconify/react';
+import scss from '../../../public/styles/variables.module.scss';
 
 type Props = {
   text: string;
@@ -13,10 +13,10 @@ type Props = {
 const GeneralButton: FC<Props> = ({ text, method, ignoreTheme = false }) => {
   const textAnimation: Variants = {
     initial: {
-      color: scss.black,
+      color: ignoreTheme ? '#000000' : scss.black,
     },
     hover: {
-      color: scss.black,
+      color: ignoreTheme ? '#FFFFFF' : scss.white,
       transition: {
         duration: 0.1,
       },
@@ -25,8 +25,8 @@ const GeneralButton: FC<Props> = ({ text, method, ignoreTheme = false }) => {
 
   const buttonAnimation: Variants = {
     initial: {
-      backgroundColor: scss.black,
-      borderColor: scss.white,
+      backgroundColor: ignoreTheme ? '#FFFFFF' : scss.white,
+      borderColor: ignoreTheme ? '#000000' : scss.black,
     },
     hover: {
       backgroundColor: scss.apple,
@@ -39,10 +39,12 @@ const GeneralButton: FC<Props> = ({ text, method, ignoreTheme = false }) => {
 
   const arrowAnimation: Variants = {
     initial: {
-      width: "50%",
+      width: '50%',
+      color: ignoreTheme ? '#000000' : scss.black,
     },
     hover: {
-      x: "90%",
+      x: '90%',
+      color: ignoreTheme ? '#FFFFFF' : scss.white,
       transition: {
         duration: 1,
       },
@@ -50,19 +52,26 @@ const GeneralButton: FC<Props> = ({ text, method, ignoreTheme = false }) => {
   };
 
   return (
-    <button type="submit" className={styles._container} onClick={method}>
+    <button type='submit' className={styles._container} onClick={method}>
       <motion.div
-        whileHover="hover"
+        whileHover='hover'
         variants={buttonAnimation}
-        className={styles._buttonContainer}
-      >
+        className={[styles._buttonContainer, ignoreTheme ? styles._ignoreTheme : ''].join(' ')}>
         <div className={styles._button}>
           <div className={styles._textContainer}>
-            <div className={styles._text}>{text}</div>
+            <motion.p
+              className={styles._text}
+              style={{ color: ignoreTheme ? '#000000' : scss.white }}
+              variants={textAnimation}>
+              {text}
+            </motion.p>
           </div>
 
-          <motion.div variants={arrowAnimation} className={styles._image}>
-            <Icon icon="mdi:arrow-right" width={22} color="black"/>
+          <motion.div
+            variants={arrowAnimation}
+            className={styles._image}
+            style={{ color: ignoreTheme ? '#000000' : scss.white }}>
+            <Icon icon='mdi:arrow-right' width={22} />
           </motion.div>
         </div>
       </motion.div>

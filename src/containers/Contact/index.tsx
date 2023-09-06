@@ -113,7 +113,7 @@ const Contact = forwardRef<HTMLDivElement>((props: any, ref) => {
                 ))}
 
                 <div className={styles._buttonContainer}>
-                  <GeneralButton method={handleSubmit} ignoreTheme text={props?.sendButton} />
+                  <GeneralButton method={handleSubmit} text={props?.sendButton} ignoreTheme/>
                 </div>
               </form>
               <div>

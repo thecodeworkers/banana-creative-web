@@ -147,7 +147,8 @@
 
 @include responsive(lg) {
   ._main {
-    height: 35rem;
+    height: 40rem;
+    bottom: 3rem;
   }
 
   ._content {

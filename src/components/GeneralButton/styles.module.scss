@@ -10,12 +10,11 @@
   align-items: center;
   padding: 1rem;
   cursor: pointer;
-  border: 1px solid $black;
-  color: $black;
+  border: 1px solid $white;
 
-  /*&._ignoreTheme {
-    border: 1px solid #FFFFFF;
-  }*/
+  &._ignoreTheme {
+    border: 1px solid #000000;
+  }
 }
 
 ._button {
@@ -24,6 +23,7 @@
   align-items: center;
   position: relative;
   width: 100%;
+
 }
 
 ._text {
@@ -38,6 +38,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
 }
 
 ._container {
