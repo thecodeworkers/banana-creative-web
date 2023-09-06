@@ -1,0 +1,55 @@
+@import '../../../public/styles/index.scss';
+
+._buttonContainer {
+  width: 285px;
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: 1.25rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+  border: 1px solid $white;
+
+  &._ignoreTheme {
+    border: 1px solid #000000;
+  }
+}
+
+._button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: 100%;
+
+}
+
+._text {
+  font-size: $helvetica16;
+  font-family: $helvetica;
+  margin-right: 1rem;
+  width: max-content;
+}
+
+._image {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+._container {
+  background-color: transparent;
+  border: none;
+
+}
+
+@include responsive(lg) {
+  ._text {
+    font-size: $helvetica14;
+    font-weight: 400;
+  }
+}

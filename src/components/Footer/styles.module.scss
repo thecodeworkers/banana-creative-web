@@ -1,0 +1,101 @@
+@import '../../../public/styles/index.scss';
+
+._content {
+    background-color: $footerBlack;
+    width: 100%;
+    max-width: $max-width;
+    height: 4.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+._textBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 2rem;
+}
+
+._textContainer {
+    padding-bottom: 0.5rem;
+
+}
+
+._iconContainer {
+    padding-bottom: 0.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: $footerWhite;
+}
+
+._icons {
+    margin: 0 0.8rem 0 0;
+    cursor: pointer;
+}
+
+._mediaContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+   
+    padding-right: 2rem;
+}
+
+._iconsContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+
+._icon {
+    margin: 0 0.4rem;
+
+    &:last-child {
+        margin-right: 0;
+
+    }
+}
+
+._text {
+    color: $footerWhite;
+    font-size: $helvetica16;
+    font-family: $helvetica;
+
+}
+
+@include responsive(lg) {
+
+
+    ._iconsContainer {
+        padding-right: 1rem;
+    }
+
+    ._textBox {
+        align-items: center;
+        padding-left: 0;
+
+    }
+
+    ._text {
+        font-size: $helvetica14;
+        text-align: center;
+        line-height: 1rem
+    }
+
+    ._content {
+        padding-top: 3rem;
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    ._mediaContainer {
+        padding-right: 0;
+
+    }
+
+}
