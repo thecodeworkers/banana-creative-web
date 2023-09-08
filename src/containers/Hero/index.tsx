@@ -9,8 +9,10 @@ const Hero = ({ action }: any) => {
 
   return (
     <div className={styles._hero}>
-      <h1 className={styles._firstText}>{t("heroFirstText")}</h1>
-      <h1 className={styles._secondText}>{t("heroSecondText")}</h1>
+      <div className={styles._heroTextContainer}>
+        <h1 className={styles._firstText}>{t("heroFirstText1")}<br className={styles._lineBreak}/>{t("heroFirstText2")}</h1>
+        <h1 className={styles._secondText}>{t("heroSecondText1")}<br className={styles._lineBreak}/>{t("heroSecondText2")}</h1>
+      </div>
       <p className={styles._smallText}>{t("heroSmallText")}</p>
       <div className={styles._buttonContainer}>
         <GeneralButton method={() => scrolling(action)} text={t("contact")} />

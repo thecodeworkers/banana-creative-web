@@ -29,6 +29,10 @@
   margin-top: 2rem;
 }
 
+._lineBreak{
+  display: none;
+}
+
 @include responsive(lg) {
   ._hero {
     margin-top: 8rem;
@@ -45,5 +49,9 @@
 
   ._smallText{
     display: none;
+  }
+
+  ._lineBreak{
+    display: inherit;
   }
 }
