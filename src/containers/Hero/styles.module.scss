@@ -23,13 +23,22 @@
 ._smallText {
   margin-top: 2rem;
   font-family: $helvetica;
+  display: flex;
+
+  & div:first-child {
+    margin: 0;
+  }
+}
+
+._smallTextItem{
+  margin-left: 1.5rem;
 }
 
 ._buttonContainer {
   margin-top: 2rem;
 }
 
-._lineBreak{
+._lineBreak {
   display: none;
 }
 
@@ -39,19 +48,19 @@
     margin-bottom: 4rem;
   }
 
-  ._firstText{
+  ._firstText {
     font-size: 1.875rem;
   }
 
-  ._secondText{
+  ._secondText {
     font-size: 1.875rem;
   }
 
-  ._smallText{
+  ._smallText {
     display: none;
   }
 
-  ._lineBreak{
+  ._lineBreak {
     display: inherit;
   }
 }

@@ -109,7 +109,7 @@ const Navbar: FC<Props> = ({ data, refs }) => {
                       setShow(false);
                     }}
                   >
-                    {route?.name}
+                    {t(route?.name)}
                   </p>
                 </div>
               ))}
