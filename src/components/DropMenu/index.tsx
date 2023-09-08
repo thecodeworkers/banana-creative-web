@@ -1,6 +1,7 @@
 import React, { FC, useState } from "react";
 import styles from "./styles.module.scss";
 import { Icon } from "@iconify/react";
+import useTranslation from "next-translate/useTranslation";
 
 interface pack {
   name: string;
@@ -13,6 +14,7 @@ interface Props {
 
 const DropMenu: FC<Props> = ({ packs }) => {
   const [showMenu, setShowMenu] = useState(false);
+  const { t } = useTranslation("common");
 
   const actionMenu = () => {
     return setShowMenu(!showMenu);
@@ -21,7 +23,7 @@ const DropMenu: FC<Props> = ({ packs }) => {
   return (
     <div className={showMenu ? styles._dropMenu : styles._menu}>
       <div className={styles._title} onClick={() => actionMenu()}>
-        <p>Packs</p>
+        <p>{t("navPacks")}</p>
         <a className={showMenu ? styles._hidden : styles._chevronDown}>
           <Icon icon="mdi:chevron-down" color="white" width={28} />
         </a>

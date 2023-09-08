@@ -2,8 +2,11 @@ import Image from "next/image";
 import React from "react";
 import styles from "./styles.module.scss";
 import { Icon } from "@iconify/react";
+import useTranslation from "next-translate/useTranslation";
 
 const Footer = ({ copyright, phone, media, mediaText, message, mail }: any) => {
+  const { t } = useTranslation("common");
+
   const bookACall = () => {
     window.open(`https://api.whatsapp.com/send?phone=${phone}&text=${message}`);
   };
@@ -28,7 +31,7 @@ const Footer = ({ copyright, phone, media, mediaText, message, mail }: any) => {
         </div>
       </div>
       <div className={styles._mediaContainer}>
-        <p className={styles._text}>{mediaText}</p>
+        <p className={styles._text}>{t(mediaText)}</p>
 
         <div className={styles._iconsContainer}>
           {media?.map((media: any, index: number | string) => (

@@ -70,7 +70,6 @@ const Navbar: FC<Props> = ({ data, refs }) => {
           </div>
 
           <div className={styles._textBox}>
-            <div>{t("welcome")}</div>
             {data?.routes?.map((route: any, index: number | string) => (
               <p
                 key={index}
@@ -79,7 +78,7 @@ const Navbar: FC<Props> = ({ data, refs }) => {
                   scrolling(refs[route?.ref as keyof ScrollOption])
                 }
               >
-                {route?.name}
+                {t(route?.name)}
               </p>
             ))}
             <div className={styles._packs}>

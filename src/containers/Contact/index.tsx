@@ -4,8 +4,11 @@ import { FormikConfig } from './formik';
 import { Footer, GeneralButton, GeneralInput } from '@/components';
 import { useAnimate } from 'framer-motion';
 import { Icon } from '@iconify/react';
+import useTranslation from "next-translate/useTranslation";
 
 const Contact = forwardRef<HTMLDivElement>((props: any, ref) => {
+  const { t } = useTranslation("common");
+
   const handleSubmit = () => {
     window.open(
       `https://api.whatsapp.com/send?phone=${props?.phone}&text=${props?.contactMessage} Company: ${values?.company} , Email: ${values?.email} , Subject: ${values?.subject}`,
@@ -56,7 +59,7 @@ const Contact = forwardRef<HTMLDivElement>((props: any, ref) => {
         <div ref={haveProject} className={styles._animationHaveProjectWrapper}>
           <div className={styles._haveProjectWrapper}>
             <div className={styles._haveProject}>
-              <p className={styles._haveProjectText}>{props?.gotTitle}</p>
+              <p className={styles._haveProjectText}>{t(props?.gotTitle)}</p>
               <div className={styles._haveProjectButtons}>
                 <div className={styles._button}>
                   <GeneralButton text={props?.touchButton} ignoreTheme method={toForm} />
@@ -83,9 +86,9 @@ const Contact = forwardRef<HTMLDivElement>((props: any, ref) => {
             <div className={styles._textBox}>
               <p className={styles._goBack} onClick={toHaveProject}>
                 <Icon icon='mdi:arrow-left' width={22} />
-                {props?.goBackText}
+                {t(props?.goBackText)}
               </p>
-              <p className={styles._title}>{props?.contactTitle}</p>
+              <p className={styles._title}>{t(props?.contactTitle)}</p>
               <div className={styles._textContainer}>
                 {props?.address?.map((address: any, index: number | string) => (
                   <p key={index} className={styles._text}>
@@ -105,7 +108,7 @@ const Contact = forwardRef<HTMLDivElement>((props: any, ref) => {
                       value={values[field.key]}
                       onChange={handleChange}
                       onFocus={() => handleOnTouched(field?.key)}
-                      placeholder={field?.name}
+                      placeholder={t(field?.name)}
                       error={errors[field.key] && touched[field.key] ? true : false}
                       errorMessage={errors[field.key]}
                     />

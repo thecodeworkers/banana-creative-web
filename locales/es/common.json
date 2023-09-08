@@ -1,3 +1,20 @@
 {
-  "welcome": "Pagina en espanol"
+  "welcome": "Pagina en espanol",
+  "navProcess": "Proceso",
+  "navServices": "Servicios",
+  "navContact": "Contacto",
+  "navPacks": "Paquetes",
+  "contact": "Contact us",
+  "heroFirstText": "Le damos forma a tus ideas, creando marcas",
+  "heroSecondText": "Hermosas, Significativas y Atemporales.",
+  "heroSmallText": "HACEMOS: BRANDING MOTION GRAPHICS RRSS PRODUCTIONS TECHNOLOGY COMMUNICATIONS",
+  "footerTitle1": "¿ALGO EN MENTE?",
+  "footerTitle2": "PONTE EN CONTACTO",
+  "footerBack": "Regresar",
+  "footerForm1": "Compañía o Emprendimiento*",
+  "footerForm2": "Correo*",
+  "footerForm3": "Mensaje*",
+  "footerMedia": "Puedes seguirnos en:"
 }
+
+ 

@@ -15,9 +15,9 @@ const data = {
     "image": "/resources/header/logo.svg",
     "alt": "Banana Creative",
     "routes": [
-      { "name": "Process", "ref": "process" },
-      { "name": "Services", "ref": "services" },
-      { "name": "Contact", "ref": "contact" }
+      { "name": "navProcess", "ref": "process" },
+      { "name": "navServices", "ref": "services" },
+      { "name": "navContact", "ref": "contact" }
     ],
     "packs": [
       { "name": "Design", "subdomain": "design" },
@@ -300,14 +300,14 @@ const data = {
     "touchButton": "Get in touch",
     "callButton": "Book a Call",
     "sendButton": "Send",
-    "gotTitle": "GOT A PROJECT?",
-    "mediaText": "You can follow us at:",
-    "contactTitle": "LET’S GET IN TOUCH",
-    "goBackText": "Go Back",
+    "gotTitle": "footerTitle1",
+    "mediaText": "footerMedia",
+    "contactTitle": "footerTitle2",
+    "goBackText": "footerBack",
     "form": [
-      { "name": "Company o Startup*", "key": "company" },
-      { "name": "Email*", "key": "email" },
-      { "name": "Message*", "key": "subject" }
+      { "name": "footerForm1", "key": "company" },
+      { "name": "footerForm2", "key": "email" },
+      { "name": "footerForm3", "key": "subject" }
     ],
     "media": [
       {

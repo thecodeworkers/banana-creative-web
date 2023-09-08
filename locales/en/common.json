@@ -1,3 +1,18 @@
 {
-  "welcome": "Page in English"
+  "welcome": "Page in English",
+  "navProcess": "Process",
+  "navServices": "Services",
+  "navContact": "Contact",
+  "navPacks": "Packs",
+  "heroFirstText": "We are a creative team focused on developing",
+  "heroSecondText": "Meaningful, Beautiful and Timeless projects",
+  "heroSmallText": "WE DO: BRANDING MOTION GRAPHICS RRSS PRODUCTIONS TECHNOLOGY COMMUNICATIONS",
+  "contact": "Contact us",
+  "footerTitle1": "GOT A PROJECT?",
+  "footerTitle2": "LET’S GET IN TOUCH",
+  "footerBack": "Go Back",
+  "footerForm1": "Company o Startup*",
+  "footerForm2": "Email*",
+  "footerForm3": "Message*",
+  "footerMedia": "You can follow us at:"
 }
