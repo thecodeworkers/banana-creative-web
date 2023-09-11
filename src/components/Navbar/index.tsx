@@ -23,23 +23,13 @@ type ScrollOption = {
 
 const Navbar: FC<Props> = ({ data, refs }) => {
   const [show, setShow] = useState<boolean>(false);
-  const [language, useLanguage] = useState<string>("ENG");
-
   const { t } = useTranslation("common");
-
-  const SetEng = () => {
-    useLanguage("ENG");
-  };
-  const SetEsp = () => {
-    useLanguage("ESP");
-  };
+  const language = t("language");
 
   const ChangeLang = () => {
     if (language === "ENG") {
-      SetEsp();
       setLanguage("es");
     } else {
-      SetEng();
       setLanguage("en");
     }
   };
@@ -117,7 +107,7 @@ const Navbar: FC<Props> = ({ data, refs }) => {
                 <DropMenu packs={data?.packs} />
               </div>
               <div className={styles._textLang} onClick={() => ChangeLang()}>
-                {language}
+                {t("language")}
               </div>
             </div>
           )}
