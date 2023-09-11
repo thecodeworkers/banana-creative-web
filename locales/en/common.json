@@ -1,3 +1,27 @@
 {
-  "welcome": "Page in English"
+  "welcome": "Page in English",
+  "language": "ENG",
+  "navProcess": "Process",
+  "navServices": "Services",
+  "navContact": "Contact",
+  "navPacks": "Packs",
+  "heroFirstText1": "We shape your vision ",
+  "heroFirstText2": "to a new level, creating", 
+  "heroSecondText1": "Meaningful, Beautiful ",
+  "heroSecondText2": "and Timeless brands.",
+  "heroSmallText1": "WE DO:",
+  "heroSmallText2": "BRANDING",
+  "heroSmallText3": "MOTION GRAPHICS",
+  "heroSmallText4": "RRSS",
+  "heroSmallText5": "PRODUCTIONS",
+  "heroSmallText6": "TECHNOLOGY",
+  "heroSmallText7": "COMMUNICATIONS",
+  "contact": "Contact us",
+  "footerTitle1": "GOT A PROJECT?",
+  "footerTitle2": "LET’S GET IN TOUCH",
+  "footerBack": "Go Back",
+  "footerForm1": "Company o Startup*",
+  "footerForm2": "Email*",
+  "footerForm3": "Message*",
+  "footerMedia": "You can follow us at:"
 }

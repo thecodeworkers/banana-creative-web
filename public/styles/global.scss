@@ -59,8 +59,13 @@ a {
 }
 
 @font-face {
-  font-family: "Editorial";
+  font-family: "EditorialItalic";
   src: url('../../public/fonts/PPEditorialNew-UltralightItalic.otf');
+}
+
+@font-face {
+  font-family: "Editorial";
+  src: url('../../public/fonts/PPEditorialNew-Ultralight.otf');
 }
 
 @font-face {

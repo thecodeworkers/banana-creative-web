@@ -11,9 +11,9 @@
   height: fit-content;
   position: relative;
   top: 4.5rem;
-  padding-top: 0.6rem;
   animation: fadeIn 0.2s ease-in;
   height: fit-content;
+  padding: 0.6rem 0.75rem 0 1.3rem;
 }
 
 ._title {
@@ -21,6 +21,9 @@
   cursor: pointer;
   justify-content: center;
   align-items: center;
+  width: 6.5rem;
+  justify-content: flex-start;
+
 }
 
 ._content {
@@ -29,7 +32,7 @@
 }
 
 ._packs {
-  margin: 1rem 1.12rem;
+  margin: 1rem 0;
 }
 
 ._chevronDown {
@@ -67,7 +70,7 @@
     border-radius: 0;
     border: none;
     top: 0;
-    padding-top: 0;
+    padding: 0;
     border-bottom: 1px solid $gray;
     color: $gallery;
     font-size: $helvetica16;
@@ -80,6 +83,7 @@
     border-bottom: 1px solid $gray;
     margin-top: 0.5rem;
     padding-bottom: 0.5rem;
+    width: inherit;
   }
 
   ._chevronDown {

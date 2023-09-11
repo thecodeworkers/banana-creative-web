@@ -23,23 +23,13 @@ type ScrollOption = {
 
 const Navbar: FC<Props> = ({ data, refs }) => {
   const [show, setShow] = useState<boolean>(false);
-  const [language, useLanguage] = useState<string>("ENG");
-
   const { t } = useTranslation("common");
-
-  const SetEng = () => {
-    useLanguage("ENG");
-  };
-  const SetEsp = () => {
-    useLanguage("ESP");
-  };
+  const language = t("language");
 
   const ChangeLang = () => {
     if (language === "ENG") {
-      SetEsp();
       setLanguage("es");
     } else {
-      SetEng();
       setLanguage("en");
     }
   };
@@ -70,7 +60,6 @@ const Navbar: FC<Props> = ({ data, refs }) => {
           </div>
 
           <div className={styles._textBox}>
-            <div>{t("welcome")}</div>
             {data?.routes?.map((route: any, index: number | string) => (
               <p
                 key={index}
@@ -79,7 +68,7 @@ const Navbar: FC<Props> = ({ data, refs }) => {
                   scrolling(refs[route?.ref as keyof ScrollOption])
                 }
               >
-                {route?.name}
+                {t(route?.name)}
               </p>
             ))}
             <div className={styles._packs}>
@@ -110,7 +99,7 @@ const Navbar: FC<Props> = ({ data, refs }) => {
                       setShow(false);
                     }}
                   >
-                    {route?.name}
+                    {t(route?.name)}
                   </p>
                 </div>
               ))}
@@ -118,7 +107,7 @@ const Navbar: FC<Props> = ({ data, refs }) => {
                 <DropMenu packs={data?.packs} />
               </div>
               <div className={styles._textLang} onClick={() => ChangeLang()}>
-                {language}
+                {t("language")}
               </div>
             </div>
           )}

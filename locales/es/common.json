@@ -1,3 +1,29 @@
 {
-  "welcome": "Pagina en espanol"
+  "welcome": "Pagina en espanol",
+  "language": "ESP",
+  "navProcess": "Proceso",
+  "navServices": "Servicios",
+  "navContact": "Contacto",
+  "navPacks": "Paquetes",
+  "contact": "Contact us",
+  "heroFirstText1": "Le damos forma a ",
+  "heroFirstText2": "tus ideas, creando marcas",
+  "heroSecondText1": "Hermosas, Significativas ",
+  "heroSecondText2": "y Atemporales.",
+  "heroSmallText1": "HACEMOS:",
+  "heroSmallText2": "BRANDING",
+  "heroSmallText3": "MOTION GRAPHICS",
+  "heroSmallText4": "RRSS",
+  "heroSmallText5": "PRODUCTIONS",
+  "heroSmallText6": "TECHNOLOGY",
+  "heroSmallText7": "COMMUNICATIONS",
+  "footerTitle1": "¿ALGO EN MENTE?",
+  "footerTitle2": "PONTE EN CONTACTO",
+  "footerBack": "Regresar",
+  "footerForm1": "Compañía o Emprendimiento*",
+  "footerForm2": "Correo*",
+  "footerForm3": "Mensaje*",
+  "footerMedia": "Puedes seguirnos en:"
 }
+
+ 
