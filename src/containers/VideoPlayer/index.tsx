@@ -1,10 +1,9 @@
-import React, { FC, useEffect, useState, useRef } from "react";
+import React, { FC, useRef } from "react";
 import Image from "next/image";
 import styles from "./styles.module.scss";
 import { useScroll, useTransform, motion } from "framer-motion";
 
 const VideoPlayer: FC = () => {
-  const [animate, setAnimate] = useState(false);
   const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
