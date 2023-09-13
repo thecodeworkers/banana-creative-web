@@ -12,9 +12,9 @@ const VideoPlayer: FC = () => {
 
   const StandardSVG = useTransform(
     scrollYProgress,
-    // Porcentaje de scroll Abel credits
+    // Scroll percentage
     [0, 0.25, 0.5, 1],
-    // Medidas de scale Abel credits
+    // Scale size
     [0.5, 1, 1, 0.5]
   );
 
