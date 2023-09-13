@@ -1,7 +1,7 @@
 import { Navbar } from "@/components";
 import Head from "next/head";
 import { useRef } from "react";
-import { Contact, Hero } from "@/containers";
+import { Contact, Hero, VideoPlayer } from "@/containers";
 import { useRouter } from "next/router";
 import 'keen-slider/keen-slider.min.css';
 import useTranslation from 'next-translate/useTranslation';
@@ -47,6 +47,8 @@ export default function Home() {
       <main className={styles._main}>
 
         <Hero action={contactRef}/>
+
+        <VideoPlayer />
 
         <h1 style={{color: "white", paddingTop: '20rem'}}>{t("welcome")}</h1>
         <Contact  {...data?.contactUs} {...data?.general} ref={contactRef} />
