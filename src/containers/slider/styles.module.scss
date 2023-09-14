@@ -1,0 +1,23 @@
+@import "../../../public/styles/index.scss";
+
+._processContainer{
+    margin: 12rem 0;
+    font-family: $helvetica;
+    color: $white;
+}
+
+._sliderContainer{
+    margin-top: 8rem;
+}
+
+._title{
+    text-align: center;
+    font-size: 4rem;
+}
+
+._slide{
+    background-color: white;
+    color: $black;
+    height: 34rem;
+    width: 100%;
+}
