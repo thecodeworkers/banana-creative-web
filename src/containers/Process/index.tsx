@@ -63,22 +63,22 @@ const Process = forwardRef<HTMLDivElement>((props, ref) => {
           if (mouseOver) return;
           timeout = setTimeout(() => {
             slider.next();
-          }, 2000);
+          }, 5000);
         }
-        // slider.on("created", () => {
-        //   slider.container.addEventListener("mouseover", () => {
-        //     mouseOver = true;
-        //     clearNextTimeout();
-        //   });
-        //   slider.container.addEventListener("mouseout", () => {
-        //     mouseOver = false;
-        //     nextTimeout();
-        //   });
-        //   nextTimeout();
-        // });
-        // slider.on("dragStarted", clearNextTimeout);
-        // slider.on("animationEnded", nextTimeout);
-        // slider.on("updated", nextTimeout);
+        slider.on("created", () => {
+          slider.container.addEventListener("mouseover", () => {
+            mouseOver = true;
+            clearNextTimeout();
+          });
+          slider.container.addEventListener("mouseout", () => {
+            mouseOver = false;
+            nextTimeout();
+          });
+          nextTimeout();
+        });
+        slider.on("dragStarted", clearNextTimeout);
+        slider.on("animationEnded", nextTimeout);
+        slider.on("updated", nextTimeout);
       },
     ]
   );
