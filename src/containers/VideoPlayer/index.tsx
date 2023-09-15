@@ -13,7 +13,7 @@ const VideoPlayer: FC = () => {
   const StandardSVG = useTransform(
     scrollYProgress,
     // Scroll percentage
-    [0, 0.25, 0.5, 1],
+    [0, 0.10, 0.20, 1],
     // Scale size
     [0.5, 1, 1, 0.5]
   );
