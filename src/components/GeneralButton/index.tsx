@@ -16,7 +16,7 @@ const GeneralButton: FC<Props> = ({ text, method, ignoreTheme = false }) => {
       color: ignoreTheme ? '#000000' : scss.black,
     },
     hover: {
-      color: ignoreTheme ? '#FFFFFF' : scss.white,
+      color: ignoreTheme ? '#000000' : scss.black,
       transition: {
         duration: 0.1,
       },
@@ -44,7 +44,7 @@ const GeneralButton: FC<Props> = ({ text, method, ignoreTheme = false }) => {
     },
     hover: {
       x: '90%',
-      color: ignoreTheme ? '#FFFFFF' : scss.white,
+      color: ignoreTheme ? '#000000' : scss.black,
       transition: {
         duration: 1,
       },

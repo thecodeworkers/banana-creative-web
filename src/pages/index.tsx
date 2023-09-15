@@ -1,7 +1,7 @@
 import { Navbar } from "@/components";
 import Head from "next/head";
 import { useRef } from "react";
-import { Contact, Hero, Process, VideoPlayer } from "@/containers";
+import { Contact, Hero, SliderBanner, Process, VideoPlayer } from "@/containers";
 import { useRouter } from "next/router";
 import 'keen-slider/keen-slider.min.css';
 import useTranslation from 'next-translate/useTranslation';
@@ -9,7 +9,6 @@ import useTranslation from 'next-translate/useTranslation';
 import styles from "./styles.module.scss";
 
 import data from '../content/data'
-import Slider from "@/containers/slider";
 
 export default function Home() {
   const router = useRouter();
@@ -53,7 +52,8 @@ export default function Home() {
 
         <Process ref={processRef} />
 
-        <h1 style={{color: "white", paddingTop: '20rem'}}>{t("welcome")}</h1>
+        <SliderBanner data={data?.packsSlider} />
+
         <Contact  {...data?.contactUs} {...data?.general} ref={contactRef} />
         
       </main>

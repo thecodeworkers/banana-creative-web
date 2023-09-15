@@ -1,0 +1,73 @@
+@import "../../../public/styles/index.scss";
+
+._packsContainer {
+  position: relative;
+  margin-bottom: 12rem;
+  width: 50rem;
+}
+
+._image {
+  position: relative;
+  width: 74.75rem;
+  height: 22.5625rem;
+
+  img {
+    position: absolute;
+    object-fit: fit;
+  }
+}
+
+._imageMobile {
+  display: none;
+}
+
+._button {
+  position: absolute;
+  top: 70%;
+  left: 6.75%;
+}
+
+._arrowLeft {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 2%;
+}
+
+._arrowRight {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 97%;
+}
+
+@include responsive(lg){
+  ._image{
+    display: none;
+  }
+
+  ._imageMobile{
+    display: block;
+    position: relative;
+    width: 20.3125rem;
+    height: 26.25rem;
+    img {
+      position: absolute;
+      object-fit: fit;
+    }
+    margin: auto;
+  }
+
+  ._button{
+    top: 82.5%;
+    left: 8%;
+  }
+
+  ._arrowLeft{
+    display: none;
+  }
+
+  ._arrowRight{
+    display: none;
+  }
+}
