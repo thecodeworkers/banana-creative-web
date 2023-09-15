@@ -54,27 +54,26 @@ const Process = forwardRef<HTMLDivElement>((props, ref) => {
     [
       (slider) => {
         let timeout: ReturnType<typeof setTimeout>;
-        let mouseOver = false;
+        let mouseOver = 2000;
         function clearNextTimeout() {
           clearTimeout(timeout);
         }
         function nextTimeout() {
           clearTimeout(timeout);
-          if (mouseOver) return;
           timeout = setTimeout(() => {
             slider.next();
-          }, 5000);
+          }, mouseOver);
         }
         slider.on("created", () => {
           slider.container.addEventListener("mouseover", () => {
-            mouseOver = true;
-            clearNextTimeout();
+            mouseOver = 6000;
+            nextTimeout;
           });
           slider.container.addEventListener("mouseout", () => {
-            mouseOver = false;
+            mouseOver = 2000;
             nextTimeout();
           });
-          nextTimeout();
+          nextTimeout()
         });
         slider.on("dragStarted", clearNextTimeout);
         slider.on("animationEnded", nextTimeout);
