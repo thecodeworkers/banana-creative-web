@@ -45,7 +45,7 @@ const Process = forwardRef<HTMLDivElement>((props, ref) => {
     {
       loop: true,
       defaultAnimation: {
-        duration: 2000
+        duration: 1500
       },
       slideChanged(slider) {
         setCurrent(slider.track.details.rel);
@@ -65,20 +65,20 @@ const Process = forwardRef<HTMLDivElement>((props, ref) => {
             slider.next();
           }, 2000);
         }
-        // slider.on("created", () => {
-        //   slider.container.addEventListener("mouseover", () => {
-        //     mouseOver = true;
-        //     clearNextTimeout();
-        //   });
-        //   slider.container.addEventListener("mouseout", () => {
-        //     mouseOver = false;
-        //     nextTimeout();
-        //   });
-        //   nextTimeout();
-        // });
-        // slider.on("dragStarted", clearNextTimeout);
-        // slider.on("animationEnded", nextTimeout);
-        // slider.on("updated", nextTimeout);
+        slider.on("created", () => {
+          slider.container.addEventListener("mouseover", () => {
+            mouseOver = true;
+            clearNextTimeout();
+          });
+          slider.container.addEventListener("mouseout", () => {
+            mouseOver = false;
+            nextTimeout();
+          });
+          nextTimeout();
+        });
+        slider.on("dragStarted", clearNextTimeout);
+        slider.on("animationEnded", nextTimeout);
+        slider.on("updated", nextTimeout);
       },
     ]
   );
