@@ -1,0 +1,102 @@
+@import "../../../public/styles/index.scss";
+
+._serviceContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 12rem;
+}
+
+._title {
+  color: $white;
+  font-family: $editorialItalic;
+  font-size: 1.875rem;
+}
+
+._link {
+  display: flex;
+  color: $apple;
+  font-family: $pixel;
+  font-size: 4rem;
+  padding: 3rem 0;
+  border-bottom: 0.125rem solid $apple;
+  position: relative;
+
+  &:last-child {
+    border: none;
+  }
+}
+
+._design {
+  position: absolute;
+  top: -15%;
+  left: 25%;
+}
+
+._motion {
+  position: absolute;
+  top: -15%;
+  left: 55%;
+}
+
+._tech {
+  position: absolute;
+  top: -15%;
+  left: 43%;
+}
+
+._prod {
+  position: absolute;
+  top: -15%;
+  left: 45%;
+}
+
+._comms {
+  position: absolute;
+  top: -15%;
+  left: 55%;
+}
+
+._image {
+  display: none;
+  position: relative;
+  z-index: 1;
+  width: 23.6875rem;
+  height: 14rem;
+  img {
+    object-fit: fit;
+    border-radius: 0.625rem;
+  }
+}
+
+._link:hover {
+  ._image {
+    display: block;
+  }
+}
+
+@include responsive(lg) {
+  ._serviceContainer {
+    margin-bottom: 12rem;
+  }
+
+  ._title {
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  ._link{
+    font-size: 1.875rem;
+    padding: 1.5rem 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ._link:hover {
+    ._image {
+      display: none;
+    }
+  }
+}
