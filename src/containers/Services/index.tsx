@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, forwardRef } from "react";
 import styles from "./styles.module.scss";
 import Link from "next/link";
 import Image from "next/image";
@@ -17,7 +17,7 @@ type Data = {
   };
 };
 
-const Services = ({ data }: Data) => {
+const Services = forwardRef<HTMLDivElement>((data: any, ref) => {
   const { t } = useTranslation("common");
 
   const style = (subdomain: string) => {
@@ -42,9 +42,9 @@ const Services = ({ data }: Data) => {
   }
 
   return (
-    <div className={styles._serviceContainer}>
+    <div ref={ref} className={styles._serviceContainer}>
       <div className={styles._title}>{t(data?.title)}</div>
-      {data?.dataArr.map((service, index) => (
+      {data?.dataArr.map((service: service, index: number) => (
         <Link
           key={index}
           href={`https://${service.subdomain}.bananacreative.io`}
@@ -62,6 +62,8 @@ const Services = ({ data }: Data) => {
       ))}
     </div>
   );
-};
+});
+
+Services.displayName = "Services";
 
 export default Services;

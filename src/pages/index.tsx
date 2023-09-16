@@ -54,7 +54,7 @@ export default function Home() {
 
         <SliderBanner data={data?.sliderBanner} />
 
-        <Services data={data?.services} />
+        <Services {...data?.services} ref={servicesRef}/>
 
         <Contact  {...data?.contactUs} {...data?.general} ref={contactRef} />
         
