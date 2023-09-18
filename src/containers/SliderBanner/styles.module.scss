@@ -42,6 +42,10 @@
 }
 
 @include responsive(lg){
+  ._packsContainer{
+    margin-bottom: 6rem;
+  }
+
   ._image{
     display: none;
   }
