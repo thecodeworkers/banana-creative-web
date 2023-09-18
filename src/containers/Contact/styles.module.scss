@@ -29,14 +29,14 @@
 ._title {
   font-size: $helvetica90;
   color: $footerWhite;
-  font-family: $helvetica;
+  font-family: $helveticaLight;
   margin-bottom: 1rem;
   width: 80%;
 
   & span {
     color: $heliotrope;
     font-size: $helvetica90;
-    font-family: $helvetica;
+    font-family: $helveticaLight;
   }
 }
 
@@ -45,7 +45,7 @@
   font-size: $helvetica16;
   color: $footerWhite;
   margin-top: 0.5rem;
-  font-family: $helvetica;
+  font-family: $helveticaLight;
   width: 70%;
 }
 
@@ -129,7 +129,7 @@
 }
 
 ._haveProjectText {
-  font-family: $helvetica;
+  font-family: $helveticaLight;
   font-size: $helvetica90;
   color: $footerWhite;
 }
@@ -214,7 +214,7 @@
     align-items: center;
     color: $footerWhite;
     margin-top: 0.5rem;
-    font-family: $helvetica;
+    font-family: $helveticaLight;
     font-size: $helvetica14;
     line-height: 1rem;
   }

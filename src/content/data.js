@@ -100,6 +100,33 @@ const data = {
       },
     ],
   },
+  testimonials: [
+    {
+      text: "testimonialMilagro",
+      author: "Natalia Niño",
+      client: "Milagro Contreras"
+    },
+    {
+      text: "testimonialSkybike",
+      author: "Ariana De Sena",
+      client: "Skybike"
+    },
+    {
+      text: "testimonialTagHunters",
+      author: "Sidney García y Clarissa Monteverde",
+      client: "The Tag Hunters"
+    },
+    {
+      text: "testimonialFOMB",
+      author: "Nestor Castillas",
+      client: "FOMB"
+    },
+    {
+      text: "testimonialICAI",
+      author: "Moises Nuñez",
+      client: "ICAI"
+    }
+  ],
   contactUs: {
     address: [""],
     copyright: "© BananaCreative 2023",
