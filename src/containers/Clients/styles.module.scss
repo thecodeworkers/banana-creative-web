@@ -1,0 +1,57 @@
+@import "../../../public/styles/index.scss";
+
+._image {
+  position: relative;
+  width: 10rem;
+  height: 3rem;
+  margin: 2.25rem 2.5rem;
+  img {
+    object-fit: fit;
+  }
+}
+
+._topLine {
+  position: relative;
+  display: flex;
+  left: 100%;
+  animation: motionLeft infinite linear 15s;
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+._bottomLine {
+  position: relative;
+  display: flex;
+  left: 100%;
+  animation: motionRight infinite linear 15s;
+  margin-bottom: 12rem;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes motionLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes motionRight {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@include responsive(lg){
+  ._bottomLine{
+    margin-bottom: 6rem;
+  }
+}

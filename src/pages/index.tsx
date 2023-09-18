@@ -1,7 +1,7 @@
 import { Navbar } from "@/components";
 import Head from "next/head";
 import { useRef } from "react";
-import { Contact, Hero, SliderBanner, Process, VideoPlayer, Services, Testimonials } from "@/containers";
+import { Contact, Hero, SliderBanner, Process, VideoPlayer, Services, Testimonials, Clients } from "@/containers";
 import { useRouter } from "next/router";
 import 'keen-slider/keen-slider.min.css';
 import useTranslation from 'next-translate/useTranslation';
@@ -57,6 +57,8 @@ export default function Home() {
         <Services {...data?.services} ref={servicesRef}/>
 
         <Testimonials data={data?.testimonials} />
+
+        <Clients clients={data?.clients} />
 
         <Contact  {...data?.contactUs} {...data?.general} ref={contactRef} />
         
