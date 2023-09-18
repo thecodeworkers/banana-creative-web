@@ -8,10 +8,10 @@ type Clients = {
 
 const Clients = ({clients}: Clients) => {
 
-    const total = clients.length
+    const total = clients?.length
 
     const clientIteration = (arrStart: number, arrEnd: number) => {
-       const JSX = clients.slice(arrStart, arrEnd).map((client, index)=>(
+       const JSX = clients?.slice(arrStart, arrEnd).map((client, index)=>(
             <div key={index} className={styles._image}><Image alt={`client${index}`} src={client} fill/></div>
         ));
         return JSX
