@@ -40,34 +40,34 @@ const data = {
   },
   sliderBanner: [
     {
-      alt: "brandLink",
+      alt: "designLink",
       desktop: "/resources/sliderBanner/brand.png",
       mobile: "/resources/sliderBanner/brandMobile.png",
-      link: "",
+      subdomain: "design",
     },
     {
       alt: "techLink",
       desktop: "/resources/sliderBanner/tech.png",
       mobile: "/resources/sliderBanner/techMobile.png",
-      link: "",
+      subdomain: "tech",
     },
     {
       alt: "motionLink",
       desktop: "/resources/sliderBanner/motion.png",
       mobile: "/resources/sliderBanner/motionMobile.png",
-      link: "",
+      subdomain: "motion",
     },
     {
       alt: "prodLink",
       desktop: "/resources/sliderBanner/prod.png",
       mobile: "/resources/sliderBanner/prodMobile.png",
-      link: "",
+      subdomain: "prod",
     },
     {
       alt: "commsLink",
       desktop: "/resources/sliderBanner/comms.png",
       mobile: "/resources/sliderBanner/commsMobile.png",
-      link: "",
+      subdomain: "comms",
     },
   ],
   services: {
@@ -126,6 +126,25 @@ const data = {
       author: "Moises Nuñez",
       client: "ICAI"
     }
+  ],
+  clients: [
+    "/resources/clients/cantina.svg",
+    "/resources/clients/sotano7.svg",
+    "/resources/clients/carbinox.svg",
+    "/resources/clients/banco-activo.svg",
+    "/resources/clients/la-praline.svg",
+    "/resources/clients/sonnon.svg",
+    "/resources/clients/victor-porfidio.svg",
+    "/resources/clients/mayela.svg",
+    // Lines division
+    "/resources/clients/oui.svg",
+    "/resources/clients/prana.svg",
+    "/resources/clients/reebok.svg",
+    "/resources/clients/vanaido.svg",
+    "/resources/clients/rodizza.svg",
+    "/resources/clients/acnur.svg",
+    "/resources/clients/infoguia.svg",
+    "/resources/clients/ulabel.svg"
   ],
   contactUs: {
     address: [""],

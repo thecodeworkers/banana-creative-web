@@ -70,21 +70,25 @@
 
 @include responsive(lg) {
 
-
-    ._iconsContainer {
-        padding-right: 1rem;
-    }
-
     ._textBox {
-        align-items: center;
+        display: grid;
         padding-left: 0;
-
     }
 
     ._text {
         font-size: $helvetica14;
         text-align: center;
         line-height: 1rem
+    }
+
+    ._textContainer{
+        grid-row: 2;
+    }
+
+    ._iconContainer{
+        grid-row: 1;
+        justify-content: center;
+        align-items: center;
     }
 
     ._content {

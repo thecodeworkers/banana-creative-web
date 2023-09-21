@@ -9,7 +9,7 @@ type pack = {
   alt: string;
   desktop: string;
   mobile: string;
-  link: string;
+  subdomain: string;
 };
 
 type data = {
@@ -18,6 +18,10 @@ type data = {
 
 const SliderBanner = ({ data }: data) => {
   const [current, setCurrent] = useState(0);
+
+  const goToPricing = (subdomain: string) => {
+    return window.open(`https://${subdomain}.bananacreative.io`, '_blank')
+  }
 
   const slidesArr = data?.map((pack, index) => (
     <div
@@ -28,7 +32,7 @@ const SliderBanner = ({ data }: data) => {
       <div className={styles._imageMobile}><Image src={pack?.mobile} alt={pack?.alt} fill/></div>
 
       <div className={styles._button}>
-        <GeneralButton text="Pricing" />
+        <GeneralButton text="Pricing" method={()=>goToPricing(pack?.subdomain)}/>
       </div>
     </div>
   ));
