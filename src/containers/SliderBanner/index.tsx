@@ -68,7 +68,7 @@ const SliderBanner = ({ data }: data) => {
     [
       (slider) => {
         let timeout: ReturnType<typeof setTimeout>;
-        let mouseOver = 2000;
+        let mouseOver = 3000;
         function clearNextTimeout() {
           clearTimeout(timeout);
         }
@@ -84,7 +84,7 @@ const SliderBanner = ({ data }: data) => {
             nextTimeout();
           });
           slider.container.addEventListener("mouseout", () => {
-            mouseOver = 2000;
+            mouseOver = 3000;
             nextTimeout();
           });
           nextTimeout();

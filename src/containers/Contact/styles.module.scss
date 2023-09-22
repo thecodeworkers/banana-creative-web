@@ -144,13 +144,19 @@
 
 @include responsive(lg) {
   ._main {
-    height: 35rem;
+    height: 31rem;
+    width: 100%;
     bottom: 3rem;
+    background-color: $footerBlack;
+  }
+
+  ._mainWithForm{
+    height: 35rem;
   }
 
   ._content {
     flex-direction: column;
-    padding: 2rem 0;
+    padding: 0;
   }
 
   ._textBox {
@@ -181,6 +187,7 @@
 
   ._haveProject{
     padding-top: 3rem;
+    height: fit-content;
   }
 
   ._haveProjectText {
@@ -191,15 +198,17 @@
 
   ._haveProjectWrapper{
     padding-top: 0;
+    height: fit-content;
   }
 
   ._animationFormWrapper {
     right: 0;
-    padding: 3rem 1.5rem;
+    padding: 1rem 1rem 0 1rem;
   }
 
   ._animationHaveProjectWrapper {
     left: 0;
+    height: fit-content;
   }
 
   ._haveProjectButtons {
@@ -238,6 +247,7 @@
   ._formWrapper {
     flex-direction: column;
     margin-top: 0;
+    height: fit-content;
   }
 
   ._buttonContainer {
