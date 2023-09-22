@@ -58,6 +58,9 @@ const SliderBanner = ({ data }: data) => {
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>(
     {
       loop: true,
+      slides: {
+        spacing: 20
+      },
       defaultAnimation: {
         duration: 1000,
       },

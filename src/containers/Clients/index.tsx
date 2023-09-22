@@ -12,7 +12,7 @@ const Clients = ({clients}: Clients) => {
 
     const clientIteration = (arrStart: number, arrEnd: number) => {
        const JSX = clients?.slice(arrStart, arrEnd).map((client, index)=>(
-            <div key={index} className={styles._image}><Image alt={`client${index}`} src={client} fill/></div>
+            <div key={index} className={styles._image}><Image priority alt={`client${index}`} src={client} fill/></div>
         ));
         return JSX
     }
