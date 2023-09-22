@@ -8,12 +8,12 @@
 
 ._sliderContainer {
   position: relative;
-  margin: 8rem 0 12rem 0;
+  margin: 4rem 0 6rem 0;
 }
 
 ._title {
   font-family: $helveticaLight;
-  margin-top: 12rem;
+  margin-top: 4rem;
   text-align: center;
   font-size: 4rem;
   color: $white;
@@ -127,65 +127,168 @@
 
 ._circle {
   position: absolute;
-  width: 8rem;
-  height: 8rem;
-  border: 0.125rem solid $white;
-  border-radius: 50%;
-  top: 25%;
-  left: 21%;
-  animation: fadeIn 0.75s forwards;
+  width: 33rem;
+  height: 33rem;
+  animation: circleIntro 0.8s forwards;
 }
 
 ._splash {
   position: absolute;
-  animation: motion12 ease-out 0.75s forwards;
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+  border: 0.125rem solid $motionGreen;
+  top: 25%;
+  left: 21%;
+  animation: motion12 0.8s ease-in-out forwards;
 }
 
 ._splashImage {
   position: relative;
   width: 23.5rem;
   height: 22rem;
+  opacity: 0;
   image {
     position: absolute;
-    object-fit: cover;
+    object-fit: fit;
   }
+  top: -10%;
+  animation: splashIntro 0.8s ease-in-out forwards;
 }
 
-._star {
-  position: absolute;
-  animation: motion23 ease 0.75s forwards;
-}
-
-._starImage {
+._starImageCircle{
   position: relative;
   width: 33rem;
   height: 33rem;
   image {
     position: absolute;
-    object-fit: cover;
+    object-fit: fit;
+  }
+  animation: starOutro 0.8s linear forwards;
+}
+
+._star {
+  position: absolute;
+  animation: motion23 ease-out 0.8s forwards;
+}
+
+._starIntro {
+  position: relative;
+  width: 33rem;
+  height: 33rem;
+  opacity: 0;
+  image {
+    position: absolute;
+    object-fit: fit;
+  }
+  animation: starIntro 0.8s ease forwards;
+}
+
+._splashOutro{
+  position: relative;
+  width: 23.5rem;
+  height: 22rem;
+  image {
+    position: absolute;
+    object-fit: fit;
+  }
+  animation: splashOutro 0.8s ease forwards
+}
+
+._positionAbsolute{
+  position: absolute;
+  top: 11%;
+  right: 28%;
+}
+
+@keyframes splashOutro {
+  0%{
+    opacity: 1;
+  }
+  40%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+    scale: 1;
   }
 }
 
-@keyframes fadeIn {
-  0% {
+@keyframes starIntro {
+  0%{
+    scale: 0.65;
+    bottom: 20%;
+  }
+  40%{
     opacity: 0;
   }
-  40% {
-    opacity: 0.2;
+  50%{
+    opacity: 0.6;
+    scale: 0.75;
+    top: 10%;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes starOutro {
+  0%{
+    bottom: 23%;
+    right: 18%;
+  }
+  50%{
+    bottom: 0;
+    right: 0;
+    width: 8rem;
+    height: 8rem;
+    opacity: 0;
+  }
+  100%{
+    bottom: 0;
+    right: 0;
+    width: 8rem;
+    height: 8rem;
+    opacity: 0;
+  }
+}
+
+@keyframes circleIntro {
+  0% {
+    top: 25%;
+    left: 21%;
+    border-radius: 50%;
+  }
+  70% {
+    top: 25%;
+    left: 21%;
+    width: 8rem;
+    height: 8rem;
+    border: 0.125rem solid $motionGreen;
+    border-radius: 50%;
   }
   100% {
-    opacity: 1;
+    width: 8rem;
+    height: 8rem;
+    border: 0.125rem solid $motionGreen;
+    border-radius: 50%;
+    top: 25%;
+    left: 21%;
   }
 }
 
 @keyframes motion12 {
   0% {
+    opacity: 1;
+  }
+  55% {
+    width: 22rem;
+    height: 22rem;
     opacity: 0.4;
-    scale: 0.5;
-    top: 10%;
-    left: 21%;
+    border-color: $black
   }
   100% {
+    border: none;
     left: 66.5%;
     top: 32%;
     opacity: 1;
@@ -193,18 +296,26 @@
   }
 }
 
+@keyframes splashIntro {
+  0% {
+  }
+  75% {
+    opacity: 0.85;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
 @keyframes motion23 {
   0% {
-    opacity: 0.5;
-    scale: 0.5;
     left: 66.5%;
     top: 22%;
   }
   100% {
     top: 2%;
     left: 13%;
-    opacity: 1;
-    scale: 1;
   }
 }
 
@@ -255,10 +366,12 @@
   ._circle {
     width: 3.4rem;
     height: 3.4rem;
-    border: 0.125rem solid $white;
+    border: 0.125rem solid $motionGreen;
+    border-radius: 50%;
     top: 15%;
     left: 50%;
-    animation: mobileFadeIn ease 0.7s;
+    opacity: 0;
+    animation: mobileFadeIn ease-out 1s forwards;
   }
 
   ._titleOver2 {
@@ -291,12 +404,18 @@
   ._splash {
     left: 45%;
     top: 3%;
-    animation: mobileFadeIn ease 0.7s;
+    border: none;
+    border-radius: 0;
+    animation: mobileFadeIn ease-out 1s forwards;
+    opacity: 0;
   }
 
   ._splashImage {
     width: 10rem;
     height: 9.5rem;
+    opacity: 1;
+    top: 0;
+    animation: none;
   }
 
   ._titleOver3 {
@@ -327,14 +446,28 @@
   }
 
   ._star {
-    animation: mobileFadeIn ease 0.7s;
+    animation: mobileFadeIn ease-out 1s forwards;
     top: 0%;
     left: 22.5%;
+    opacity: 0;
   }
 
-  ._starImage {
+  ._starIntro {
     width: 14.4rem;
     height: 14.2em;
+    opacity: 1;
+    img{
+      object-fit: fit;
+    }
+    animation: none;
+  }
+
+  ._positionAbsolute{
+    display: none;
+  }
+
+  ._starImageCircle{
+    display: none;
   }
 
   @keyframes mobileFadeIn {

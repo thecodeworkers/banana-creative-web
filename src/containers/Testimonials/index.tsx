@@ -45,7 +45,7 @@ const Testimonials = ({ data }: data) => {
     [
       (slider) => {
         let timeout: ReturnType<typeof setTimeout>;
-        let mouseOver = 2000;
+        let mouseOver = 1500;
         function clearNextTimeout() {
           clearTimeout(timeout);
         }
@@ -57,11 +57,11 @@ const Testimonials = ({ data }: data) => {
         }
         slider.on("created", () => {
           slider.container.addEventListener("mouseover", () => {
-            mouseOver = 4000;
+            mouseOver = 5000;
             nextTimeout();
           });
           slider.container.addEventListener("mouseout", () => {
-            mouseOver = 2000;
+            mouseOver = 1500;
             nextTimeout();
           });
           nextTimeout();
