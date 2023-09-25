@@ -1,5 +1,6 @@
 @import "../../../public/styles/index.scss";
 
+._mainWithForm,
 ._main {
   width: 100%;
   display: flex;
@@ -150,7 +151,7 @@
     background-color: $footerBlack;
   }
 
-  ._mainWithForm{
+  ._mainWithForm {
     height: 35rem;
   }
 
@@ -185,7 +186,7 @@
     margin: 0 2.5%;
   }
 
-  ._haveProject{
+  ._haveProject {
     padding-top: 3rem;
     height: fit-content;
   }
@@ -196,7 +197,7 @@
     text-align: center;
   }
 
-  ._haveProjectWrapper{
+  ._haveProjectWrapper {
     padding-top: 0;
     height: fit-content;
   }
