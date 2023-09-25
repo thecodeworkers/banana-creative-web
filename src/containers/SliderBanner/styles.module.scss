@@ -2,8 +2,11 @@
 
 ._packsContainer {
   position: relative;
-  margin-bottom: 12rem;
   width: 50rem;
+}
+
+._slide{
+  position: relative;
 }
 
 ._image {
@@ -27,18 +30,28 @@
   left: 6.75%;
 }
 
-._arrowLeft {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 2%;
+._dotGroup{
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 10rem;
+  background-color: $black;
 }
 
-._arrowRight {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 97%;
+._dotOff{
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 0.125rem solid $white;
+  border-radius: 50%;
+  margin-left: 0.8rem;
+  background-color: $black;
+}
+
+._dotOn{
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 0.125rem solid $white;
+  border-radius: 50%;
+  margin-left: 0.8rem;
 }
 
 @include responsive(lg){
@@ -53,7 +66,7 @@
   ._imageMobile{
     display: block;
     position: relative;
-    width: 20.3125rem;
+    width: 85vw;
     height: 26.25rem;
     img {
       position: absolute;
@@ -64,14 +77,13 @@
 
   ._button{
     top: 82.5%;
-    left: 8%;
+    width: 17.8125rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
 
-  ._arrowLeft{
-    display: none;
-  }
-
-  ._arrowRight{
+  ._dotGroup{
     display: none;
   }
 }

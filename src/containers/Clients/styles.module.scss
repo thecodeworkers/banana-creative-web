@@ -14,7 +14,7 @@
   position: relative;
   display: flex;
   left: 100%;
-  animation: motionLeft infinite linear 15s;
+  animation: motionLeft infinite linear 20s;
   &:hover {
     animation-play-state: paused;
   }
@@ -24,7 +24,7 @@
   position: relative;
   display: flex;
   left: 100%;
-  animation: motionRight infinite linear 15s;
+  animation: motionRight infinite linear 20s;
   margin-bottom: 12rem;
 
   &:hover {

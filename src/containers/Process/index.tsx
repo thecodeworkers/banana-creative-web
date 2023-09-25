@@ -29,13 +29,16 @@ const Process = forwardRef<HTMLDivElement>((props, ref) => {
     const index = current.toString();
     const selection: any = {
       "0": {
-        figure: null,
+        figure: <div className={styles._starImageCircle}><Image alt="starFigure" src={'/resources/processMotion/star.svg'} fill/></div>,
       },
       "1": {
-        figure: <div className={styles._splashImage}><Image alt="splashFigure" src={'/resources/processMotion/splash.png'} fill/></div>,
+        figure: <div className={styles._splashImage}><Image alt="splashFigure" src={'/resources/processMotion/splash.svg'} fill/></div>,
       },
       "2": {
-        figure: <div className={styles._starImage}><Image alt="starFigure" src={'/resources/processMotion/star.png'} fill/></div>,
+        figure: <div>
+          <div className={styles._positionAbsolute}><div className={styles._splashOutro}><Image alt="splashFigure" src={'/resources/processMotion/splash.svg'} fill/></div></div>
+          <div className={styles._starIntro}><Image alt="starFigure" src={'/resources/processMotion/star.svg'} fill/></div>
+          </div>,
       },
     };
     return selection[index] || {};
@@ -45,7 +48,7 @@ const Process = forwardRef<HTMLDivElement>((props, ref) => {
     {
       loop: true,
       defaultAnimation: {
-        duration: 1500
+        duration: 1000
       },
       slideChanged(slider) {
         setCurrent(slider.track.details.rel);
@@ -54,7 +57,7 @@ const Process = forwardRef<HTMLDivElement>((props, ref) => {
     [
       (slider) => {
         let timeout: ReturnType<typeof setTimeout>;
-        let mouseOver = 2000;
+        let mouseOver = 1500;
         function clearNextTimeout() {
           clearTimeout(timeout);
         }
@@ -66,11 +69,11 @@ const Process = forwardRef<HTMLDivElement>((props, ref) => {
         }
         slider.on("created", () => {
           slider.container.addEventListener("mouseover", () => {
-            mouseOver = 6000;
+            mouseOver = 5000;
             nextTimeout;
           });
           slider.container.addEventListener("mouseout", () => {
-            mouseOver = 2000;
+            mouseOver = 1500;
             nextTimeout();
           });
           nextTimeout()

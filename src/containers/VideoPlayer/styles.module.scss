@@ -1,6 +1,11 @@
 @import "../../../public/styles/index.scss";
 
-._videoDesktop {
+._videoDesktop{
+  overflow: hidden;
+  border-radius: 0.625rem;
+}
+
+._video {
   position: relative;
   width: 100vw;
   height: 90vh;

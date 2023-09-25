@@ -20,26 +20,47 @@ const SliderBanner = ({ data }: data) => {
   const [current, setCurrent] = useState(0);
 
   const goToPricing = (subdomain: string) => {
-    return window.open(`https://${subdomain}.bananacreative.io`, '_blank')
-  }
+    return window.open(`https://${subdomain}.bananacreative.io`, "_blank");
+  };
 
   const slidesArr = data?.map((pack, index) => (
-    <div
-      key={index}
-      className={"keen-slider__slide"}
-    >
-      <div className={styles._image}><Image src={pack?.desktop} alt={pack?.alt} fill/></div>
-      <div className={styles._imageMobile}><Image src={pack?.mobile} alt={pack?.alt} fill/></div>
+    <div key={index} className={[styles._slide, "keen-slider__slide"].join(" ")}>
+      <div className={styles._image}>
+        <Image src={pack?.desktop} alt={pack?.alt} fill />
+      </div>
+      <div className={styles._imageMobile}>
+        <Image src={pack?.mobile} alt={pack?.alt} fill />
+      </div>
 
       <div className={styles._button}>
-        <GeneralButton text="Pricing" method={()=>goToPricing(pack?.subdomain)}/>
+        <GeneralButton
+          text="Pricing"
+          method={() => goToPricing(pack?.subdomain)}
+        />
       </div>
     </div>
   ));
 
+  const dots = () => {
+    let arr = [];
+    for (let i = 0; i < 5; i++) {
+      arr.push(i);
+    }
+    return arr.map((dot) => (
+      <button
+        key={dot}
+        onClick={() => instanceRef.current?.moveToIdx(dot)}
+        className={current === dot ? styles._dotOn : styles._dotOff}
+      ></button>
+    ));
+  };
+
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>(
     {
       loop: true,
+      slides: {
+        spacing: 20
+      },
       defaultAnimation: {
         duration: 1000,
       },
@@ -50,7 +71,7 @@ const SliderBanner = ({ data }: data) => {
     [
       (slider) => {
         let timeout: ReturnType<typeof setTimeout>;
-        let mouseOver = 2000;
+        let mouseOver = 3000;
         function clearNextTimeout() {
           clearTimeout(timeout);
         }
@@ -66,7 +87,7 @@ const SliderBanner = ({ data }: data) => {
             nextTimeout();
           });
           slider.container.addEventListener("mouseout", () => {
-            mouseOver = 2000;
+            mouseOver = 3000;
             nextTimeout();
           });
           nextTimeout();
@@ -84,20 +105,9 @@ const SliderBanner = ({ data }: data) => {
         ref={sliderRef}
         className={[styles._packsContainer, "keen-slider"].join(" ")}
       >
-        <div
-          className={styles._arrowLeft}
-          onClick={() => instanceRef.current?.prev()}
-        >
-          <ArrowLeft />
-        </div>
         {slidesArr}
-        <div
-          className={styles._arrowRight}
-          onClick={() => instanceRef.current?.next()}
-        >
-          <ArrowRight />
-        </div>
       </div>
+      <div className={styles._dotGroup}>{dots()}</div>
     </>
   );
 };

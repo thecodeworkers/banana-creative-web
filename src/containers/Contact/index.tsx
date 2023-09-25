@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useState } from 'react';
 import styles from './styles.module.scss';
 import { FormikConfig } from './formik';
 import { Footer, GeneralButton, GeneralInput } from '@/components';
@@ -8,6 +8,8 @@ import useTranslation from "next-translate/useTranslation";
 
 const Contact = forwardRef<HTMLDivElement>((props: any, ref) => {
   const { t } = useTranslation("common");
+
+  const [showForm, setShowForm] = useState(false)
 
   const handleSubmit = () => {
     window.open(
@@ -40,11 +42,13 @@ const Contact = forwardRef<HTMLDivElement>((props: any, ref) => {
   const toForm = () => {
     animateForm(form.current, { left: 0 }, { duration: 0.75, ease: 'linear', type: 'spring' });
     animateProject(haveProject.current, { left: '-100vw' }, { duration: 0.75, ease: 'linear', type: 'spring' });
+    setShowForm(!showForm)
   };
 
   const toHaveProject = () => {
     animateForm(form.current, { left: '100vw' }, { duration: 0.75, ease: 'linear', type: 'spring' });
     animateProject(haveProject.current, { left: 0 }, { duration: 0.75, ease: 'linear', type: 'spring' });
+    setShowForm(!showForm)
   };
 
   type FormType = {
@@ -53,7 +57,7 @@ const Contact = forwardRef<HTMLDivElement>((props: any, ref) => {
   };
 
   return (
-    <div ref={ref} className={styles._main}>
+    <div ref={ref} className={showForm ? styles._mainWithForm : styles._main}>
       <div className={styles._content}>
         {/* Have a Project */}
         <div ref={haveProject} className={styles._animationHaveProjectWrapper}>

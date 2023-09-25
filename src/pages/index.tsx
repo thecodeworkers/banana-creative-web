@@ -42,8 +42,6 @@ export default function Home() {
 
       <Navbar data={data?.navbar} refs={refs}/>
 
-      
-
       <main className={styles._main}>
 
         <Hero action={contactRef}/>
@@ -59,10 +57,10 @@ export default function Home() {
         <Testimonials data={data?.testimonials} />
 
         <Clients clients={data?.clients} />
-
-        <Contact  {...data?.contactUs} {...data?.general} ref={contactRef} />
-        
+ 
       </main>
+
+      <Contact  {...data?.contactUs} {...data?.general} ref={contactRef} />
     </>
   );
 }
