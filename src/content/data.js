@@ -1,7 +1,7 @@
 const data = {
   metadata: {
     description:
-      "We specialize in the development of technological solutions, security, UI/UX design, and infrastructure to achieve a complete digital experience",
+      "metaDescription",
     ogImage: "/resources/metaResources/ogimage.jpg",
     title: "BANANA CREATIVE",
   },
@@ -19,24 +19,52 @@ const data = {
     image: "/resources/header/logo.svg",
     alt: "Banana Creative",
     routes: [
-      { name: "navProcess", ref: "process" },
-      { name: "navServices", ref: "services" },
-      { name: "navContact", ref: "contact" },
+      { name: "processTitle", ref: "process" },
+      { name: "servicesTitle", ref: "services" },
+      { name: "contactTitle", ref: "contact" },
     ],
-    packs: [
-      { name: "Design", subdomain: "design" },
-      { name: "Tech", subdomain: "tech" },
-      { name: "Motion", subdomain: "motion" },
-      { name: "Production", subdomain: "prod" },
-    ],
+    packNav: {
+      title: "packsTitle",
+      packs: [
+        { name: "Design", subdomain: "design" },
+        { name: "Tech", subdomain: "tech" },
+        { name: "Motion", subdomain: "motion" },
+        { name: "Production", subdomain: "prod" },
+      ],
+    },
+    language: "language",
   },
   hero: {
-    title: "WE HELP YOU BOOST YOUR",
-    bold: "INTERFACE",
-    subtitle: "We develop, create and innovate your ideas.",
-    button: "Contact Us",
-    image: "/resources/banners/tech/banana.svg",
-    altImage: "Banana",
+    mainTitle: ["weShape", "toNewLevel"],
+    secondTitle: ["meaningful", "andTimeless"],
+    smallText: [
+      "wedo",
+      "branding",
+      "motion",
+      "rrss",
+      "productions",
+      "tech",
+      "comms",
+    ],
+  },
+  video: "/resources/testGif.gif",
+  process: {
+    title: [
+      "processDivTitleHalf",
+      "processDivTitleRest"
+    ],
+    firstSlide: {
+      subtitle: "findItSubtitle",
+      paragraph: "findItParagraph"
+    },
+    secondSlide: {
+      subtitle: "shapeItSubtitle",
+      paragraph: "shapeItParagraph"
+    },
+    thirdSlide: {
+      subtitle: "blowItSubtitle",
+      paragraph: "blowItParagraph"
+    }
   },
   sliderBanner: [
     {
@@ -71,7 +99,7 @@ const data = {
     },
   ],
   services: {
-    title: "Services",
+    title: "services",
     dataArr: [
       {
         name: "DESIGN",
@@ -104,28 +132,28 @@ const data = {
     {
       text: "testimonialMilagro",
       author: "Natalia Niño",
-      client: "Milagro Contreras"
+      client: "Milagro Contreras",
     },
     {
       text: "testimonialSkybike",
       author: "Ariana De Sena",
-      client: "Skybike"
+      client: "Skybike",
     },
     {
       text: "testimonialTagHunters",
       author: "Sidney García y Clarissa Monteverde",
-      client: "The Tag Hunters"
+      client: "The Tag Hunters",
     },
     {
       text: "testimonialFOMB",
       author: "Nestor Castillas",
-      client: "FOMB"
+      client: "FOMB",
     },
     {
       text: "testimonialICAI",
       author: "Moises Nuñez",
-      client: "ICAI"
-    }
+      client: "ICAI",
+    },
   ],
   clients: [
     "/resources/clients/cantina.svg",
@@ -144,7 +172,7 @@ const data = {
     "/resources/clients/rodizza.svg",
     "/resources/clients/acnur.svg",
     "/resources/clients/infoguia.svg",
-    "/resources/clients/ulabel.svg"
+    "/resources/clients/ulabel.svg",
   ],
   contactUs: {
     address: [""],
@@ -152,14 +180,14 @@ const data = {
     touchButton: "Get in touch",
     callButton: "Book a Call",
     sendButton: "Send",
-    gotTitle: "footerTitle1",
-    mediaText: "footerMedia",
-    contactTitle: "footerTitle2",
-    goBackText: "footerBack",
+    gotTitle: "gotProject",
+    mediaText: "socials",
+    contactTitle: "letsGetInTouch",
+    goBackText: "goBack",
     form: [
-      { name: "footerForm1", key: "company" },
-      { name: "footerForm2", key: "email" },
-      { name: "footerForm3", key: "subject" },
+      { name: "company", key: "company" },
+      { name: "email", key: "email" },
+      { name: "message", key: "subject" },
     ],
     media: [
       {

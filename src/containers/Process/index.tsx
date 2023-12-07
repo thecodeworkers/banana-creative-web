@@ -4,7 +4,23 @@ import { useKeenSlider } from "keen-slider/react";
 import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
 
-const Process = forwardRef<HTMLDivElement>((props, ref) => {
+type Props = {
+  title: string[];
+  firstSlide: {
+    subtitle: string;
+    paragraph: string
+  };
+  secondSlide: {
+    subtitle: string;
+    paragraph: string
+  };
+  thirdSlide: {
+    subtitle: string;
+    paragraph: string
+  }
+}
+
+const Process = forwardRef<HTMLDivElement>((data: any, ref) => {
   const containerRef = useRef(null);
   const { t } = useTranslation("common");
   const [current, setCurrent] = useState(0);
@@ -88,30 +104,30 @@ const Process = forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <>
       <div ref={ref} className={styles._title}>
-        {t("processMainTitle1")}<br className={styles._lineBreak}/>{t("processMainTitle2")}
+        {t(data?.title[0])}<br className={styles._lineBreak}/>{t(data?.title[1])}
       </div>
       <div
         ref={sliderRef}
         className={[styles._sliderContainer, "keen-slider"].join(" ")}
       >
-        <a className={figureMotion}>{figure}</a>
+        <div className={figureMotion}>{figure}</div>
         <div className={[styles._slide, "keen-slider__slide"].join(" ")}>
           <p className={styles._titleOver1}>Find</p>
           <p className={styles._titleUnder1}>It</p>
-          <p className={styles._subtitle1}>{t("processSubtitle1")}</p>
-          <p className={styles._text1}>{t("processText1")}</p>
+          <p className={styles._subtitle1}>{t(data?.firstSlide?.subtitle)}</p>
+          <p className={styles._text1}>{t(data?.firstSlide?.paragraph)}</p>
         </div>
         <div className={[styles._slide, "keen-slider__slide"].join(" ")}>
           <p className={styles._titleUnder2}>Shape</p>
           <p className={styles._titleOver2}>It</p>
-          <p className={styles._subtitle2}>{t("processSubtitle2")}</p>
-          <p className={styles._text2}>{t("processText2")}</p>
+          <p className={styles._subtitle2}>{t(data?.secondSlide?.subtitle)}</p>
+          <p className={styles._text2}>{t(data?.secondSlide?.paragraph)}</p>
         </div>
         <div className={[styles._slide, "keen-slider__slide"].join(" ")}>
           <p className={styles._titleOver3}>Blow It</p>
           <p className={styles._titleUnder3}>Up</p>
-          <p className={styles._subtitle3}>{t("processSubtitle3")}</p>
-          <p className={styles._text3}>{t("processText3")}</p>
+          <p className={styles._subtitle3}>{t(data?.thirdSlide?.subtitle)}</p>
+          <p className={styles._text3}>{t(data?.thirdSlide?.paragraph)}</p>
         </div>
       </div>
     </>

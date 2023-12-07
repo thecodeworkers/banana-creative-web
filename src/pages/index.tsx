@@ -27,28 +27,28 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Banana Creative</title>
-        {/*<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1' />
+        <title>{data?.metadata?.title}</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=2' />
         <meta
           name="description"
           content={data?.metadata.description}
           key="desc"
-        />*/}
-        <meta property="og:title" content="Banana Creative" />
-        {/*<meta property="og:description" content={data?.metadata.description} />
+        />
+        <meta property="og:title" content={data?.metadata?.title} />
+        <meta property="og:description" content={data?.metadata.description} />
         <meta property="og:image" content={data?.metadata.ogImage} />
-        <meta property="og:url" content={`${router.route}`} />*/}
+        <meta property="og:url" content={`${router.route}`} />
       </Head>
 
       <Navbar data={data?.navbar} refs={refs}/>
 
       <main className={styles._main}>
 
-        <Hero action={contactRef}/>
+        <Hero action={contactRef} text={data?.hero} />
 
-        <VideoPlayer />
+        <VideoPlayer video={data?.video} />
 
-        <Process ref={processRef} />
+        <Process {...data?.process} ref={processRef} />
 
         <SliderBanner data={data?.sliderBanner} />
 

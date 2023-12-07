@@ -4,38 +4,39 @@ import { GeneralButton } from "@/components/";
 import { scrolling } from "../../utils/common";
 import useTranslation from "next-translate/useTranslation";
 
-const Hero = ({ action }: any) => {
-  const { t } = useTranslation("common");
+type textData = {
+  mainTitle: string[],
+  secondTitle: string[],
+  smallText: string[]
+}
 
-  const smallTextArr = [
-    "heroSmallText1",
-    "heroSmallText2",
-    "heroSmallText3",
-    "heroSmallText4",
-    "heroSmallText5",
-    "heroSmallText6",
-    "heroSmallText7",
-  ];
+type Props = {
+  action: any,
+  text: textData
+}
+
+const Hero = ({action, text}: Props) => {
+  const { t } = useTranslation("common");
 
   return (
     <div className={styles._hero}>
       <div className={styles._heroTextContainer}>
         <h1 className={styles._firstText}>
-          {t("heroFirstText1")}
+          {t(text?.mainTitle[0])}
           <br className={styles._lineBreak} />
-          {t("heroFirstText2")}
+          {t(text?.mainTitle[1])}
         </h1>
         <h1 className={styles._secondText}>
-          {t("heroSecondText1")}
+          {t(text?.secondTitle[0])}
           <br className={styles._lineBreak} />
-          {t("heroSecondText2")}
+          {t(text?.secondTitle[1])}
         </h1>
       </div>
-      <div className={styles._smallText}>
-        {smallTextArr.map((text, index)=>(
-          <p key={index} className={styles._smallTextItem}>{t(text)}</p>
+      <p className={styles._smallText}>
+        {text?.smallText.map((text, index)=>(
+          <span key={index} className={styles._smallTextItem}>{t(text)}</span>
         ))}
-      </div>
+      </p>
       <div className={styles._buttonContainer}>
         <GeneralButton method={() => scrolling(action)} text={t("contact")} />
       </div>
