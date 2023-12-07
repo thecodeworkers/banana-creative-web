@@ -23,16 +23,33 @@
   align-items: center;
   width: 6.5rem;
   justify-content: flex-start;
-
+  background-color: inherit;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 ._content {
   cursor: pointer;
   opacity: 0.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 ._packs {
-  margin: 1rem 0;
+  margin-bottom: 1rem;
+  background-color: inherit;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+
+  &:first-child{
+    margin-top: 1rem;
+  }
 }
 
 ._chevronDown {

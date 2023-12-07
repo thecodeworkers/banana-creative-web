@@ -19,10 +19,6 @@ type data = {
 const SliderBanner = ({ data }: data) => {
   const [current, setCurrent] = useState(0);
 
-  const goToPricing = (subdomain: string) => {
-    return window.open(`https://${subdomain}.bananacreative.io`, "_blank");
-  };
-
   const slidesArr = data?.map((pack, index) => (
     <div key={index} className={[styles._slide, "keen-slider__slide"].join(" ")}>
       <div className={styles._image}>
@@ -35,7 +31,7 @@ const SliderBanner = ({ data }: data) => {
       <div className={styles._button}>
         <GeneralButton
           text="Pricing"
-          method={() => goToPricing(pack?.subdomain)}
+          hyperlink={`https://${pack?.subdomain}.bananacreative.io`}
         />
       </div>
     </div>
@@ -51,6 +47,7 @@ const SliderBanner = ({ data }: data) => {
         key={dot}
         onClick={() => instanceRef.current?.moveToIdx(dot)}
         className={current === dot ? styles._dotOn : styles._dotOff}
+        aria-label="Choose slide"
       ></button>
     ));
   };

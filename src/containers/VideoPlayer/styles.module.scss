@@ -5,17 +5,13 @@
   border-radius: 0.625rem;
 }
 
-._video {
-  position: relative;
+._iframe{
   width: 100vw;
-  height: 90vh;
-  image {
-    position: absolute;
-    object-fit: cover;
-  }
+  height:92.5vh;
 }
 
 ._videoMobile {
+  position: relative;
   display: none;
 }
 
@@ -26,14 +22,13 @@
 
   ._videoMobile {
     border-radius: 0.625rem;
-    overflow: hidden;
     display: block;
-    position: relative;
-    width: 90vw;
-    height: 25vh;
-    image {
-      position: absolute;
-      object-fit: cover;
-    }
+    width: 20.3125rem;
+    height: 11.125rem;
+  }
+
+  ._iframeMobile {
+    width: 20.3125rem;
+    height: 11.125rem;
   }
 }

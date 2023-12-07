@@ -9,10 +9,11 @@ interface pack {
 }
 
 interface Props {
+  title: string,
   packs: pack[];
 }
 
-const DropMenu: FC<Props> = ({ packs }) => {
+const DropMenu: FC<Props> = ({title, packs}) => {
   const [showMenu, setShowMenu] = useState(false);
   const { t } = useTranslation("common");
 
@@ -22,26 +23,26 @@ const DropMenu: FC<Props> = ({ packs }) => {
 
   return (
     <div className={showMenu ? styles._dropMenu : styles._menu}>
-      <div className={styles._title} onClick={() => actionMenu()}>
-        <p>{t("navPacks")}</p>
-        <a className={showMenu ? styles._hidden : styles._chevronDown}>
+      <button className={styles._title} onClick={() => actionMenu()}>
+        <p>{t(`${title}`)}</p>
+        <span className={showMenu ? styles._hidden : styles._chevronDown}>
           <Icon icon="mdi:chevron-down" color="white" width={28} />
-        </a>
-        <a className={showMenu ? styles._chevronUp : styles._hidden}>
+        </span>
+        <span className={showMenu ? styles._chevronUp : styles._hidden}>
           <Icon icon="mdi:chevron-up" color="white" width={28} />
-        </a>
-      </div>
+        </span>
+      </button>
       <div className={showMenu ? styles._content : styles._hidden}>
         {packs?.map((pack, index) => (
-          <div key={pack.name} className={styles._packs}>
-            <a
-              href={`https://${pack.subdomain}.bananacreative.io`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {pack.name}
-            </a>
-          </div>
+          <a
+            key={pack.name}
+            className={styles._packs}
+            href={`https://${pack.subdomain}.bananacreative.io`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {pack.name}
+          </a>
         ))}
       </div>
     </div>

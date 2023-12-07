@@ -71,12 +71,12 @@ const Navbar: FC<Props> = ({ data, refs }) => {
                 {t(route?.name)}
               </p>
             ))}
-            <div className={styles._packs}>
-              <DropMenu packs={data?.packs} />
-            </div>
-            <div className={styles._textLang} onClick={() => ChangeLang()}>
+            <span className={styles._packs}>
+              <DropMenu {...data?.packNav} />
+            </span>
+            <button className={styles._textLang} onClick={() => ChangeLang()}>
               {language}
-            </div>
+            </button>
           </div>
 
           <button
@@ -103,12 +103,12 @@ const Navbar: FC<Props> = ({ data, refs }) => {
                   </p>
                 </div>
               ))}
-              <div className={styles._textContainer}>
-                <DropMenu packs={data?.packs} />
-              </div>
-              <div className={styles._textLang} onClick={() => ChangeLang()}>
+              <span className={styles._textContainer}>
+                <DropMenu {...data?.packs} />
+              </span>
+              <button className={styles._textLang} onClick={() => ChangeLang()}>
                 {t("language")}
-              </div>
+              </button>
             </div>
           )}
         </div>
