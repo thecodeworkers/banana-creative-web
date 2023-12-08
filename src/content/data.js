@@ -91,12 +91,6 @@ const data = {
       mobile: "/resources/sliderBanner/prodMobile.png",
       subdomain: "prod",
     },
-    {
-      alt: "commsLink",
-      desktop: "/resources/sliderBanner/comms.png",
-      mobile: "/resources/sliderBanner/commsMobile.png",
-      subdomain: "comms",
-    },
   ],
   services: {
     title: "services",
@@ -120,11 +114,6 @@ const data = {
         name: "PRODUCTIONS",
         image: "/resources/services/prod.jpg",
         subdomain: "prod",
-      },
-      {
-        name: "COMMUNICATIONS",
-        image: "/resources/services/tech.jpg",
-        subdomain: "comms",
       },
     ],
   },

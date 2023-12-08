@@ -39,7 +39,7 @@ const SliderBanner = ({ data }: data) => {
 
   const dots = () => {
     let arr = [];
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 4; i++) {
       arr.push(i);
     }
     return arr.map((dot) => (

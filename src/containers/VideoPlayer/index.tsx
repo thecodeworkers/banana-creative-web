@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "./styles.module.scss";
 import { useScroll, useTransform, motion, useInView } from "framer-motion";
 import YouTube, { YouTubePlayer, YouTubeProps } from "react-youtube";
+import Vimeo from "@u-wave/react-vimeo";
 
 type Props = {
   video: string;
@@ -32,12 +33,12 @@ const VideoPlayer: FC<Props> = ({ video }) => {
       mute: 1,
       VideoPlaybackQuality: "large",
       rel: 0,
-      controls: 0
+      controls: 0,
     },
   };
   // The following code mutes the video when it is not on the viewport
 
-  const videoRef = useRef(null);
+  // const videoRef = useRef(null);
   // const inView = useInView(videoRef, { amount: 0 });
   // const [player, setPlayer] = useState<YouTubePlayer>(null);
   // const [ready, setReady] = useState(false);
@@ -58,25 +59,43 @@ const VideoPlayer: FC<Props> = ({ video }) => {
 
   return (
     <>
-      <div ref={videoRef}>
         <motion.div
           style={{ scale: StandardSVG }}
           className={styles._videoDesktop}
         >
-          <YouTube
+          <Vimeo
+            video="892395591"
+            autoplay
+            muted={true}
+            loop={true}
+            showByline={false}
+            controls={false}
+            className={styles._iframe}
+            responsive
+          />
+          {/* <YouTube
             videoId="Ot5z9Ou8noc"
             opts={opts}
             iframeClassName={styles._iframe}
             // onReady={onPlayerReady}
-          />
+          /> */}
         </motion.div>
-      </div>
       <div className={styles._videoMobile}>
-        <YouTube
+        <Vimeo
+          video="892395591"
+          autoplay
+          muted={true}
+          loop={true}
+          showByline={false}
+          controls={false}
+          className={styles._iframeMobile}
+          responsive
+        />
+        {/* <YouTube
           videoId="Ot5z9Ou8noc"
           opts={opts}
           iframeClassName={styles._iframeMobile}
-        />
+        /> */}
       </div>
     </>
   );
