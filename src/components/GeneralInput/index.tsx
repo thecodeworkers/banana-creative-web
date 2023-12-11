@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './styles.module.scss';
 
-const GeneralInput = ({ name, value, placeholder, onChange, id, error, errorMessage, onFocus }: any) => {
+const GeneralInput = ({ name, value, placeholder, onChange, id, error, errorMessage, onFocus, addStyle}: any) => {
   return (
     <>
       <div className={styles._inputContainer}>
         <input
-          className={styles._input}
+          className={`${styles._input} ${addStyle}`}
           name={name}
           id={id}
           autoComplete={'off'}

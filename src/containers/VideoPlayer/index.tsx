@@ -1,8 +1,6 @@
-import React, { FC, useCallback, useEffect, useRef, useState } from "react";
-import Image from "next/image";
+import React, { FC, useRef } from "react";
 import styles from "./styles.module.scss";
-import { useScroll, useTransform, motion, useInView } from "framer-motion";
-import YouTube, { YouTubePlayer, YouTubeProps } from "react-youtube";
+import { useScroll, useTransform, motion } from "framer-motion";
 import Vimeo from "@u-wave/react-vimeo";
 
 type Props = {
@@ -23,20 +21,8 @@ const VideoPlayer: FC<Props> = ({ video }) => {
     // Scale size
     [0.5, 1, 1, 1]
   );
-
-  const opts: YouTubeProps["opts"] = {
-    playerVars: {
-      enablejsapi: 1,
-      playlist: "Ot5z9Ou8noc",
-      loop: 1,
-      autoplay: 1,
-      mute: 1,
-      VideoPlaybackQuality: "large",
-      rel: 0,
-      controls: 0,
-    },
-  };
   // The following code mutes the video when it is not on the viewport
+  // Code developed for react-youtube package
 
   // const videoRef = useRef(null);
   // const inView = useInView(videoRef, { amount: 0 });
@@ -73,12 +59,6 @@ const VideoPlayer: FC<Props> = ({ video }) => {
             className={styles._iframe}
             responsive
           />
-          {/* <YouTube
-            videoId="Ot5z9Ou8noc"
-            opts={opts}
-            iframeClassName={styles._iframe}
-            // onReady={onPlayerReady}
-          /> */}
         </motion.div>
       <div className={styles._videoMobile}>
         <Vimeo
@@ -91,11 +71,6 @@ const VideoPlayer: FC<Props> = ({ video }) => {
           className={styles._iframeMobile}
           responsive
         />
-        {/* <YouTube
-          videoId="Ot5z9Ou8noc"
-          opts={opts}
-          iframeClassName={styles._iframeMobile}
-        /> */}
       </div>
     </>
   );
