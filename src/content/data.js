@@ -15,6 +15,12 @@ const data = {
     haveProjectMessage:
       "Hello Team Banana! I have a project and would like to book a meeting with the team of Tech",
   },
+  popup: {
+    title: "joinUs",
+    text: ["newsletterTextLine1", "newsletterTextLine2", "newsletterTextLine3"],
+    checkboxDisclaimer: ["newsletterDisclaimerLine1", "newsletterDisclaimerLine2"],
+    buttonText: "discountButtonText",
+  },
   navbar: {
     image: "/resources/header/logo.svg",
     alt: "Banana Creative",
