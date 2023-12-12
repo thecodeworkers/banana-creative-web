@@ -1,0 +1,52 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginxproxy/nginx-proxy
+    container_name: nginx_cont
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - certs:/etc/nginx/certs:ro
+      - vhostd:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+    labels:
+      - com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy
+  certbot:
+    image: nginxproxy/acme-companion
+    container_name: certbot_cont
+    restart: always
+    environment:
+      - DEFAULT_EMAIL=${EMAIL}
+    volumes:
+      - certs:/etc/nginx/certs:rw
+      - vhostd:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - acme:/etc/acme.sh
+  next-app:
+    container_name: app_cont
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        DOMAIN: ${DOMAIN}
+    restart: always
+    ports:
+      - 3000:3000
+    environment:
+      - VIRTUAL_HOST=${DOMAIN_URL}
+      - LETSENCRYPT_HOST=${DOMAIN_URL}
+      - LETSENCRYPT_EMAIL=${EMAIL}
+    depends_on:
+      - nginx
+      - certbot
+
+volumes:
+    certs:
+    html:
+    vhostd:
+    acme:
