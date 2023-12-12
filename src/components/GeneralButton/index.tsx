@@ -74,9 +74,7 @@ const GeneralButton: FC<Props> = ({
               style={{ color: ignoreTheme ? "#000000" : scss.white }}
               variants={textAnimation}
             >
-              {!!hyperlink ? <a href={hyperlink} target="_blank" rel="noopener noreferrer">
-                {text}
-              </a> : <span>{text}</span>}
+              <span>{text}</span>
             </motion.p>
           </div>
 
