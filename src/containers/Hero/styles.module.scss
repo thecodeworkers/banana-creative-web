@@ -1,0 +1,66 @@
+@import "../../../public/styles/index.scss";
+
+._hero {
+  color: $white;
+  text-align: center;
+  margin-top: 12rem;
+  margin-bottom: 2rem;
+}
+
+._firstText {
+  font-family: $editorial;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 3.25rem;
+}
+
+._secondText {
+  font-family: $editorialItalic;
+  font-weight: 200;
+  font-size: 3.25rem;
+}
+
+._smallText {
+  margin-top: 1rem;
+  font-family: $helveticaLight;
+  display: flex;
+
+  & div:first-child {
+    margin: 0;
+  }
+}
+
+._smallTextItem{
+  margin-left: 1.5rem;
+}
+
+._buttonContainer {
+  margin-top: 4rem;
+}
+
+._lineBreak {
+  display: none;
+}
+
+@include responsive(lg) {
+  ._hero {
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+  }
+
+  ._firstText {
+    font-size: 1.875rem;
+  }
+
+  ._secondText {
+    font-size: 1.875rem;
+  }
+
+  ._smallText {
+    display: none;
+  }
+
+  ._lineBreak {
+    display: inherit;
+  }
+}

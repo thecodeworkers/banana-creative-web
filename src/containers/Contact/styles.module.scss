@@ -1,0 +1,257 @@
+@import "../../../public/styles/index.scss";
+
+._mainWithForm,
+._main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 65vh;
+  overflow: hidden;
+}
+
+._content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: inherit;
+}
+
+._textBox {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+}
+
+._title {
+  font-size: $helvetica90;
+  color: $footerWhite;
+  font-family: $helveticaLight;
+  margin-bottom: 1rem;
+  width: 80%;
+
+  & span {
+    color: $heliotrope;
+    font-size: $helvetica90;
+    font-family: $helveticaLight;
+  }
+}
+
+._text,
+._goBack {
+  font-size: $helvetica16;
+  color: $footerWhite;
+  margin-top: 0.5rem;
+  font-family: $helveticaLight;
+  width: 70%;
+}
+
+._textContainer {
+  width: 100%;
+}
+
+._goBack {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+._buttonContainer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+._formContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-direction: column;
+  width: 50%;
+}
+
+._form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+}
+
+._input {
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+._haveProject,
+._haveProjectWrapper {
+  width: 100%;
+  height: 98%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $footerBlack;
+  padding-top: 2rem;
+  justify-content: space-between;
+}
+
+._animationHaveProjectWrapper {
+  background-color: $footerBlack;
+  width: 100vw;
+  height: inherit;
+  position: absolute;
+  left: 0;
+}
+
+._animationFormWrapper {
+  width: 100vw;
+  height: inherit;
+  position: absolute;
+  left: 100vw;
+  padding-bottom: 2rem;
+  background-color: $footerBlack;
+  padding-top: 4rem;
+}
+
+._formWrapper {
+  display: flex;
+  max-width: $max-width;
+  margin: 0 auto;
+  margin-top: -2rem;
+}
+
+._haveProjectText {
+  font-family: $helveticaLight;
+  font-size: $helvetica90;
+  color: $footerWhite;
+}
+
+._haveProjectButtons {
+  display: flex;
+  width: 45%;
+  margin: 4.875rem 0;
+  justify-content: space-around;
+}
+
+._textResponsive {
+  display: none;
+}
+
+@include responsive(lg) {
+  ._main {
+    height: 31rem;
+    width: 100%;
+    bottom: 3rem;
+    background-color: $footerBlack;
+  }
+
+  ._mainWithForm {
+    height: 35rem;
+  }
+
+  ._content {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  ._textBox {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  ._title {
+    width: 250px;
+    font-size: 3rem;
+    text-align: flex-start;
+    font-size: $helvetica40;
+  }
+
+  ._formContainer {
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ._form {
+    width: inherit;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2.5%;
+  }
+
+  ._haveProject {
+    padding-top: 3rem;
+    height: fit-content;
+  }
+
+  ._haveProjectText {
+    font-size: $helvetica40;
+    width: 70%;
+    text-align: center;
+  }
+
+  ._haveProjectWrapper {
+    padding-top: 0;
+    height: fit-content;
+  }
+
+  ._animationFormWrapper {
+    right: 0;
+    padding: 1rem 1rem 0 1rem;
+  }
+
+  ._animationHaveProjectWrapper {
+    left: 0;
+    height: fit-content;
+  }
+
+  ._haveProjectButtons {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+
+  ._button {
+    margin: 1rem 0;
+  }
+
+  ._textResponsive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $footerWhite;
+    margin-top: 0.5rem;
+    font-family: $helveticaLight;
+    font-size: $helvetica14;
+    line-height: 1rem;
+  }
+
+  ._text,
+  ._goBack {
+    font-size: $helvetica14;
+    margin-bottom: 1rem;
+  }
+
+  ._text {
+    display: none;
+  }
+
+  ._formWrapper {
+    flex-direction: column;
+    margin-top: 0;
+    height: fit-content;
+  }
+
+  ._buttonContainer {
+    margin-bottom: 2rem;
+  }
+}

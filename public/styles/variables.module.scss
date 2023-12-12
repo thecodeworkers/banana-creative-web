@@ -1,0 +1,38 @@
+//LIGHT THEME
+// $black: #FFFFFF;
+// $white: #000000;
+// $gallery: #000000;
+// $gray: rgba(0, 0, 0, 0.2);
+// $alabaster: #191919;
+//LIGHT THEME
+
+//DARK THEME 
+$black: #000000;
+$white: #FFFFFF;
+$gallery: #ECECEC;
+$gray: rgba(255, 255, 255, 0.2);
+$alabaster: #FCFCFC;
+//DARK THEME 
+
+//FOOTER
+$footerBlack: #FFFFFF;
+$footerWhite: #000000;
+//FOOTER
+
+$lavender: #D380FF;
+$heliotrope: #CE80FE;
+$apple: #B8E19D;
+$motionGreen: #BCE5A1;
+$tundora: #434343;
+//FONT
+// $space: "Space Grotesk", sans-serif;
+// $cinzel: "Cinzel", sans-serif;
+// $raleway: "Raleway', sans-serif";
+
+$max-width: 1200px;
+
+:export {
+    black: $black;
+    white: $white;
+    apple: $apple;
+}

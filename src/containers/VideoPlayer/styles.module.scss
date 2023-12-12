@@ -1,0 +1,34 @@
+@import "../../../public/styles/index.scss";
+
+._videoDesktop{
+  overflow: hidden;
+  border-radius: 0.625rem;
+}
+
+._iframe{
+  width: 100vw;
+  height: 92.5vh;
+}
+
+._videoMobile {
+  position: relative;
+  display: none;
+}
+
+@include responsive(lg) {
+  ._videoDesktop {
+    display: none;
+  }
+
+  ._videoMobile {
+    border-radius: 0.625rem;
+    display: block;
+    width: 20.3125rem;
+    height: 11.125rem;
+  }
+
+  ._iframeMobile {
+    width: 20.3125rem;
+    height: 11.125rem;
+  }
+}

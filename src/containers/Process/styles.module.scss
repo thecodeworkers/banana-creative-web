@@ -1,0 +1,481 @@
+@import "../../../public/styles/index.scss";
+
+._processContainer {
+  margin: 12rem 0;
+  font-family: $helveticaLight;
+  color: $white;
+}
+
+._sliderContainer {
+  position: relative;
+  margin: 4rem 0 6rem 0;
+}
+
+._title {
+  font-family: $helveticaLight;
+  margin-top: 4rem;
+  text-align: center;
+  font-size: 4rem;
+  color: $white;
+}
+
+._lineBreak {
+  display: none;
+}
+
+._slide {
+  color: $white;
+  height: 34rem;
+}
+
+._titleOver1 {
+  font-family: $editorial;
+  font-size: 7.5rem;
+  position: absolute;
+  z-index: 1;
+  top: 25%;
+}
+
+._titleUnder1 {
+  font-family: $editorial;
+  font-size: 7.5rem;
+  position: absolute;
+  z-index: 0;
+  top: 25%;
+  left: 35%;
+}
+
+._subtitle1 {
+  position: absolute;
+  font-family: $editorialItalic;
+  font-size: 1.875rem;
+  top: 50%;
+}
+
+._text1 {
+  font-family: $helveticaLight;
+  max-width: 17.5rem;
+  position: absolute;
+  top: 32.5%;
+  left: 50%;
+}
+
+._titleOver2 {
+  font-family: $editorial;
+  font-size: 7.5rem;
+  position: absolute;
+  z-index: 2;
+  left: 80%;
+  top: 50%;
+}
+
+._titleUnder2 {
+  font-family: $editorial;
+  font-size: 7.5rem;
+  position: relative;
+  left: 47%;
+  top: 50%;
+}
+
+._subtitle2 {
+  font-family: $editorialItalic;
+  font-size: 1.875rem;
+  position: absolute;
+  z-index: 2;
+  left: 47%;
+  top: 76%;
+}
+
+._text2 {
+  font-family: $helveticaLight;
+  max-width: 23rem;
+  position: absolute;
+  top: 20%;
+}
+
+._titleOver3 {
+  font-family: $editorial;
+  font-size: 7.5rem;
+  position: absolute;
+  z-index: 2;
+  top: 15%;
+}
+
+._titleUnder3 {
+  font-family: $editorial;
+  font-size: 7.5rem;
+  position: absolute;
+  z-index: 0;
+  top: 15%;
+  left: 50%;
+}
+
+._subtitle3 {
+  font-family: $editorialItalic;
+  font-size: 1.875rem;
+  position: absolute;
+  top: 40%;
+}
+
+._text3 {
+  font-family: $helveticaLight;
+  max-width: 20.75rem;
+  position: absolute;
+  top: 60%;
+  left: 70%;
+}
+
+._circle {
+  position: absolute;
+  width: 33rem;
+  height: 33rem;
+  animation: circleIntro 0.8s forwards;
+}
+
+._splash {
+  position: absolute;
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+  border: 0.125rem solid $motionGreen;
+  top: 25%;
+  left: 21%;
+  animation: motion12 0.8s ease-in-out forwards;
+}
+
+._splashImage {
+  position: relative;
+  width: 23.5rem;
+  height: 22rem;
+  opacity: 0;
+  image {
+    position: absolute;
+    object-fit: fit;
+  }
+  top: -10%;
+  animation: splashIntro 0.8s ease-in-out forwards;
+}
+
+._starImageCircle{
+  position: relative;
+  width: 33rem;
+  height: 33rem;
+  image {
+    position: absolute;
+    object-fit: fit;
+  }
+  animation: starOutro 0.8s linear forwards;
+}
+
+._star {
+  position: absolute;
+  animation: motion23 ease-out 0.8s forwards;
+}
+
+._starIntro {
+  position: relative;
+  width: 33rem;
+  height: 33rem;
+  opacity: 0;
+  image {
+    position: absolute;
+    object-fit: fit;
+  }
+  animation: starIntro 0.8s ease forwards;
+}
+
+._splashOutro{
+  position: relative;
+  width: 23.5rem;
+  height: 22rem;
+  image {
+    position: absolute;
+    object-fit: fit;
+  }
+  animation: splashOutro 0.8s ease forwards
+}
+
+._positionAbsolute{
+  position: absolute;
+  top: 11%;
+  right: 28%;
+}
+
+@keyframes splashOutro {
+  0%{
+    opacity: 1;
+  }
+  40%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+    scale: 1;
+  }
+}
+
+@keyframes starIntro {
+  0%{
+    scale: 0.65;
+    bottom: 20%;
+  }
+  40%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.6;
+    scale: 0.75;
+    top: 10%;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes starOutro {
+  0%{
+    bottom: 23%;
+    right: 18%;
+  }
+  50%{
+    bottom: 0;
+    right: 0;
+    width: 8rem;
+    height: 8rem;
+    opacity: 0;
+  }
+  100%{
+    bottom: 0;
+    right: 0;
+    width: 8rem;
+    height: 8rem;
+    opacity: 0;
+  }
+}
+
+@keyframes circleIntro {
+  0% {
+    top: 25%;
+    left: 21%;
+    border-radius: 50%;
+  }
+  70% {
+    top: 25%;
+    left: 21%;
+    width: 8rem;
+    height: 8rem;
+    border: 0.125rem solid $motionGreen;
+    border-radius: 50%;
+  }
+  100% {
+    width: 8rem;
+    height: 8rem;
+    border: 0.125rem solid $motionGreen;
+    border-radius: 50%;
+    top: 25%;
+    left: 21%;
+  }
+}
+
+@keyframes motion12 {
+  0% {
+    opacity: 1;
+  }
+  55% {
+    width: 22rem;
+    height: 22rem;
+    opacity: 0.4;
+    border-color: $black
+  }
+  100% {
+    border: none;
+    left: 66.5%;
+    top: 32%;
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes splashIntro {
+  0% {
+  }
+  75% {
+    opacity: 0.85;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@keyframes motion23 {
+  0% {
+    left: 66.5%;
+    top: 22%;
+  }
+  100% {
+    top: 2%;
+    left: 13%;
+  }
+}
+
+@include responsive(lg) {
+  ._sliderContainer {
+    margin: 3.5rem 0 6rem 0;
+  }
+
+  ._slide {
+    height: 21.5rem;
+  }
+
+  ._title {
+    margin-top: 6rem;
+    font-size: 1.875rem;
+  }
+
+  ._lineBreak {
+    display: block;
+  }
+
+  ._titleOver1 {
+    font-size: 3.212rem;
+    top: 15%;
+    left: 20%;
+  }
+
+  ._titleUnder1 {
+    font-size: 3.212rem;
+    top: 15%;
+    left: 70%;
+  }
+
+  ._subtitle1 {
+    font-size: 0.803rem;
+    top: 35%;
+    left: 20%;
+  }
+
+  ._text1 {
+    font-size: 0.875rem;
+    max-width: 14.5rem;
+    top: 55%;
+    left: 15.5%;
+    text-align: center;
+  }
+
+  ._circle {
+    width: 3.4rem;
+    height: 3.4rem;
+    border: 0.125rem solid $motionGreen;
+    border-radius: 50%;
+    top: 15%;
+    left: 50%;
+    opacity: 0;
+    animation: mobileFadeIn ease-out 1s forwards;
+  }
+
+  ._titleOver2 {
+    font-size: 3.212rem;
+    z-index: 100;
+    top: 15%;
+    left: 65%;
+  }
+
+  ._titleUnder2 {
+    font-size: 3.212rem;
+    top: 15%;
+    left: 15%;
+  }
+
+  ._subtitle2 {
+    font-size: 0.803rem;
+    top: 35%;
+    left: 15%;
+  }
+
+  ._text2 {
+    font-size: 0.875rem;
+    max-width: 16.8rem;
+    text-align: center;
+    top: 60%;
+    left: 9%;
+  }
+
+  ._splash {
+    left: 45%;
+    top: 3%;
+    border: none;
+    border-radius: 0;
+    animation: mobileFadeIn ease-out 1s forwards;
+    opacity: 0;
+  }
+
+  ._splashImage {
+    width: 10rem;
+    height: 9.5rem;
+    opacity: 1;
+    top: 0;
+    animation: none;
+  }
+
+  ._titleOver3 {
+    font-size: 3.212rem;
+    z-index: 2;
+    top: 10%;
+    left: 5%;
+  }
+
+  ._titleUnder3 {
+    font-size: 3.212rem;
+    top: 10%;
+    left: 75%;
+  }
+
+  ._subtitle3 {
+    font-size: 0.803rem;
+    top: 30%;
+    left: 5%;
+  }
+
+  ._text3 {
+    font-size: 0.875rem;
+    max-width: 16.8rem;
+    text-align: center;
+    top: 80%;
+    left: 8%;
+  }
+
+  ._star {
+    animation: mobileFadeIn ease-out 1s forwards;
+    top: 0%;
+    left: 22.5%;
+    opacity: 0;
+  }
+
+  ._starIntro {
+    width: 14.4rem;
+    height: 14.2em;
+    opacity: 1;
+    img{
+      object-fit: fit;
+    }
+    animation: none;
+  }
+
+  ._positionAbsolute{
+    display: none;
+  }
+
+  ._starImageCircle{
+    display: none;
+  }
+
+  @keyframes mobileFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+@import "../../../public/styles/index.scss";
+
+._testimonialsContainer {
+  position: relative;
+  margin-bottom: 8rem;
+}
+
+._slide {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: $white;
+  font-size: 1.875rem;
+}
+
+._quotes {
+  position: relative;
+  width: 8.2rem;
+  height: 2.87rem;
+  margin: 0 auto 4rem auto;
+
+  img {
+    object-fit: fit;
+  }
+}
+
+._text {
+  text-align: center;
+  margin: 0 15%;
+  font-family: $helvetica;
+}
+
+._author {
+  text-align: center;
+  font-family: $editorialItalic;
+  margin-top: 4rem;
+}
+
+._client {
+  opacity: 0.5;
+  text-align: center;
+  font-family: $editorialItalic;
+}
+
+._arrowLeft {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 2%;
+}
+
+._arrowRight {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 97%;
+}
+
+@include responsive(lg) {
+  ._testimonialsContainer {
+    margin-bottom: 6rem;
+  }
+
+  ._slide{
+    font-size: 1.25rem;
+  }
+
+  ._quotes{
+    margin: 0 auto 3rem auto;
+  }
+
+  ._imageMobile {
+    width: 6.15rem;
+    height: 2.15rem;
+  }
+
+  ._text {
+    margin: 0;
+    font-size: 0.875rem;
+  }
+  
+  ._author {
+    margin-top: 2rem;
+  }
+
+  ._arrowLeft {
+    display: none;
+  }
+
+  ._arrowRight {
+    display: none;
+  }
+}

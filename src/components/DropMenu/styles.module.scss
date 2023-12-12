@@ -1,0 +1,117 @@
+@import "../../../public/styles/index.scss";
+
+._menu {
+  margin: 1.138rem 1rem 1.138rem 1.138rem;
+}
+
+._dropMenu {
+  border-radius: 0.1875rem;
+  border: 0.03125rem solid $white;
+  background: $black;
+  height: fit-content;
+  position: relative;
+  top: 4.5rem;
+  animation: fadeIn 0.2s ease-in;
+  height: fit-content;
+  padding: 0.6rem 0.75rem 0 1.3rem;
+}
+
+._title {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  width: 6.5rem;
+  justify-content: flex-start;
+  background-color: inherit;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+._content {
+  cursor: pointer;
+  opacity: 0.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+._packs {
+  margin-bottom: 1rem;
+  background-color: inherit;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+
+  &:first-child{
+    margin-top: 1rem;
+  }
+}
+
+._chevronDown {
+  margin-left: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+._chevronUp {
+  margin-left: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+._hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+
+@include responsive(lg) {
+  ._menu {
+    margin: 0;
+    color: $gallery;
+    font-size: $helvetica16;
+    font-family: $helveticaLight;
+  }
+
+  ._dropMenu {
+    border-radius: 0;
+    border: none;
+    top: 0;
+    padding: 0;
+    border-bottom: 1px solid $gray;
+    color: $gallery;
+    font-size: $helvetica16;
+    font-family: $helveticaLight;
+  }
+
+  ._title {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    border-bottom: 1px solid $gray;
+    margin-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: inherit;
+  }
+
+  ._chevronDown {
+    grid-column: 12;
+  }
+
+  ._chevronUp {
+    grid-column: 12;
+  }
+
+  ._packs {
+    margin: 1rem 0;
+  }
+}

@@ -1,0 +1,89 @@
+@import "../../../public/styles/index.scss";
+
+._packsContainer {
+  position: relative;
+  width: 50rem;
+}
+
+._slide{
+  position: relative;
+}
+
+._image {
+  position: relative;
+  width: 74.75rem;
+  height: 22.5625rem;
+
+  img {
+    position: absolute;
+    object-fit: fit;
+  }
+}
+
+._imageMobile {
+  display: none;
+}
+
+._button {
+  position: absolute;
+  top: 70%;
+  left: 6.75%;
+}
+
+._dotGroup{
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 10rem;
+  background-color: $black;
+}
+
+._dotOff{
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 0.125rem solid $white;
+  border-radius: 50%;
+  margin-left: 0.8rem;
+  background-color: $black;
+}
+
+._dotOn{
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 0.125rem solid $white;
+  border-radius: 50%;
+  margin-left: 0.8rem;
+}
+
+@include responsive(lg){
+  ._packsContainer{
+    margin-bottom: 6rem;
+  }
+
+  ._image{
+    display: none;
+  }
+
+  ._imageMobile{
+    display: block;
+    position: relative;
+    width: 20.3125rem;
+    height: 26.25rem;
+    img {
+      position: absolute;
+      object-fit: fit;
+    }
+    margin: auto;
+  }
+
+  ._button{
+    top: 82.5%;
+    width: 17.8125rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  ._dotGroup{
+    display: none;
+  }
+}
