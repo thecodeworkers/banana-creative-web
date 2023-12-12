@@ -6,6 +6,7 @@ import GeneralButton from "../GeneralButton";
 import useTranslation from "next-translate/useTranslation";
 import { CircleCross } from "../../../public/resources/svg";
 import { Icon } from "@iconify/react";
+import { useMutation, gql } from '@apollo/client';
 
 type Info = {
   title: string;
@@ -14,13 +15,32 @@ type Info = {
   buttonText: string;
 };
 
+const SUBMIT_FORM = gql`
+  mutation SubmitForm($email: String!) {
+    submitForm(input: { formId: 1, data: [{id: 2, value: $email},] }) {
+      errors {
+        fieldId
+        message
+        slug
+      }
+      message
+      success
+    }
+  }
+`;
+
 const PopUp = (info: Info) => {
   const { t } = useTranslation("common");
   const [show, setShow] = useState(true);
+  const [check, setCheck] = useState(false)
+  const [submitForm, { data, loading, error }] = useMutation(SUBMIT_FORM);
 
   const handleSubmit = () => {
-    console.log(`Email: ${values?.email}`);
-    resetForm();
+    if (Object.keys(errors).length < 1 && values?.email && check) {
+      submitForm({ variables: { email: values.email } })
+        .then(() => setShow(!show))
+        .catch((error) => console.log(error));
+    }
   };
 
   const {
@@ -79,6 +99,7 @@ const PopUp = (info: Info) => {
                 <input
                   type="checkbox"
                   name="checkbox"
+                  onClick={()=>{setCheck(!check)}}
                   className={styles._checkbox}
                 />
                 <div className={styles._checkboxText}>
@@ -90,7 +111,7 @@ const PopUp = (info: Info) => {
                 </div>
               </div>
 
-              <button className={styles._button} onClick={handleSubmit}>
+              <button type="submit" className={styles._button} onClick={handleSubmit}>
                 {t(info?.buttonText)}
                 <Icon
                   icon="mdi:arrow-right"

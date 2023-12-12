@@ -19,7 +19,7 @@ const Contact = forwardRef<HTMLDivElement>((props: any, ref) => {
   };
 
   const bookACall = () => {
-    window.open(`https://api.whatsapp.com/send?phone=${props?.phone}&text=${props?.haveProjectMessage}`);
+    window.open(`https://calendly.com/bananacreative/diagnostic-meeting`);
   };
 
   const [form, animateForm] = useAnimate();

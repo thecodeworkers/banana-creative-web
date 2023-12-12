@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@apollo/client": "^3.8.8",
     "@iconify/react": "^4.1.1",
     "@types/node": "20.5.3",
     "@types/react": "18.2.21",
@@ -18,13 +19,13 @@
     "eslint-config-next": "13.4.19",
     "formik": "^2.4.3",
     "framer-motion": "^10.16.1",
+    "graphql": "^16.8.1",
     "keen-slider": "^6.8.6",
     "next": "13.4.19",
     "next-translate": "^2.5.3",
     "next-translate-plugin": "^2.5.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-youtube": "^10.1.0",
     "sass": "^1.66.1",
     "sharp": "^0.32.5",
     "typescript": "5.1.6",
