@@ -45,7 +45,7 @@ export default function Home() {
         />
         <meta
           name="description"
-          content={t(data?.metadata.description)}
+          content="Banana Creative is a creative label focused on creating visual and functional universes to communicate real purposes"
           key="desc"
         />
         <meta property="og:title" content={data?.metadata?.title} />
