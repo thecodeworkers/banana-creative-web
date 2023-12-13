@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { FC, useState } from "react";
+import React, { FC, useMemo, useRef, useState } from "react";
 import { scrolling } from "../../utils/common";
 import styles from "./styles.module.scss";
 import DropMenu from "../DropMenu";
