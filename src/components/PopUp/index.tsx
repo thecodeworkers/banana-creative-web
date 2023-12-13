@@ -13,6 +13,8 @@ type Info = {
   text: string[];
   checkboxDisclaimer: string[];
   buttonText: string;
+  requiredEmail: string,
+  invalidEmail: string,
 };
 
 const SUBMIT_FORM = gql`
@@ -43,6 +45,11 @@ const PopUp = (info: Info) => {
     }
   };
 
+  const messages = {
+    required: t(info?.requiredEmail),
+    invalid: t(info?.invalidEmail)
+  }
+
   const {
     values,
     handleSubmit: formikSubmit,
@@ -51,7 +58,7 @@ const PopUp = (info: Info) => {
     resetForm,
     touched,
     setTouched,
-  } = FormikConfig(handleSubmit);
+  } = FormikConfig(handleSubmit, messages);
 
   const handleOnTouched = (key: string) => {
     setTouched({ ...touched, [key]: true });
