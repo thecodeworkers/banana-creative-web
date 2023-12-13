@@ -33,6 +33,8 @@ export default function Home() {
     contact: contactRef,
   };
 
+  console.log(data.metadata)
+
   return (
     <>
       <Head>
@@ -43,7 +45,7 @@ export default function Home() {
         />
         <meta
           name="description"
-          content={data?.metadata.description}
+          content={t(data?.metadata.description)}
           key="desc"
         />
         <meta property="og:title" content={data?.metadata?.title} />
