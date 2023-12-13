@@ -45,15 +45,15 @@ const Process = forwardRef<HTMLDivElement>((data: any, ref) => {
     const index = current.toString();
     const selection: any = {
       "0": {
-        figure: <div className={styles._starImageCircle}><Image alt="starFigure" src={'/resources/processMotion/star.svg'} fill/></div>,
+        figure: <div className={styles._starImageCircle}><Image alt="starFigure" src={'/resources/processMotion/star.svg'} fill priority/></div>,
       },
       "1": {
-        figure: <div className={styles._splashImage}><Image alt="splashFigure" src={'/resources/processMotion/splash.svg'} fill/></div>,
+        figure: <div className={styles._splashImage}><Image alt="splashFigure" src={'/resources/processMotion/splash.svg'} fill priority/></div>,
       },
       "2": {
         figure: <div>
           <div className={styles._positionAbsolute}><div className={styles._splashOutro}><Image alt="splashFigure" src={'/resources/processMotion/splash.svg'} fill/></div></div>
-          <div className={styles._starIntro}><Image alt="starFigure" src={'/resources/processMotion/star.svg'} fill/></div>
+          <div className={styles._starIntro}><Image alt="starFigure" src={'/resources/processMotion/star.svg'} fill priority/></div>
           </div>,
       },
     };
