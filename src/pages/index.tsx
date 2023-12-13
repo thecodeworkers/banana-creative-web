@@ -49,7 +49,7 @@ export default function Home() {
           key="desc"
         />
         <meta property="og:title" content={data?.metadata?.title} />
-        <meta property="og:description" content={data?.metadata.description} />
+        <meta property="og:description" content="Banana Creative is a creative label focused on creating visual and functional universes to communicate real purposes" />
         <meta property="og:image" content={data?.metadata.ogImage} />
         <meta property="og:url" content={`${router.route}`} />
       </Head>
