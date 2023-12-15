@@ -48,6 +48,7 @@ export default function Home() {
           content="Banana Creative is a creative label focused on creating visual and functional universes to communicate real purposes"
           key="desc"
         />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico"></link>
         <meta property="og:title" content={data?.metadata?.title} />
         <meta property="og:description" content="Banana Creative is a creative label focused on creating visual and functional universes to communicate real purposes" />
         <meta property="og:image" content={data?.metadata.ogImage} />
