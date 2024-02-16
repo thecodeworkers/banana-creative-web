@@ -33,6 +33,8 @@ export default function Home() {
     contact: contactRef,
   };
 
+  console.log(data.metadata)
+
   return (
     <>
       <Head>
@@ -43,11 +45,12 @@ export default function Home() {
         />
         <meta
           name="description"
-          content={data?.metadata.description}
+          content="Banana Creative is a creative label focused on creating visual and functional universes to communicate real purposes"
           key="desc"
         />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico"></link>
         <meta property="og:title" content={data?.metadata?.title} />
-        <meta property="og:description" content={data?.metadata.description} />
+        <meta property="og:description" content="Banana Creative is a creative label focused on creating visual and functional universes to communicate real purposes" />
         <meta property="og:image" content={data?.metadata.ogImage} />
         <meta property="og:url" content={`${router.route}`} />
       </Head>

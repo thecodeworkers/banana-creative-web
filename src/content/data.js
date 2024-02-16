@@ -20,6 +20,8 @@ const data = {
     text: ["newsletterTextLine1", "newsletterTextLine2", "newsletterTextLine3"],
     checkboxDisclaimer: ["newsletterDisclaimerLine1", "newsletterDisclaimerLine2"],
     buttonText: "discountButtonText",
+    requiredEmail: "requiredEmail",
+    invalidEmail: "invalidEmail",
   },
   navbar: {
     image: "/resources/header/logo.svg",
