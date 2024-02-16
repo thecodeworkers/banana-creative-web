@@ -2,6 +2,7 @@ import React, { FC, useState } from "react";
 import styles from "./styles.module.scss";
 import { Icon } from "@iconify/react";
 import useTranslation from "next-translate/useTranslation";
+import data from '../../content/data'
 
 interface pack {
   name: string;
@@ -9,11 +10,11 @@ interface pack {
 }
 
 interface Props {
-  title: string,
+  title: string;
   packs: pack[];
 }
 
-const DropMenu: FC<Props> = ({title, packs}) => {
+const DropMenu: FC<Props> = ({ title, packs }) => {
   const [showMenu, setShowMenu] = useState(false);
   const { t } = useTranslation("common");
 
@@ -21,10 +22,12 @@ const DropMenu: FC<Props> = ({title, packs}) => {
     return setShowMenu(!showMenu);
   };
 
+  const menu = data.navbar.packNav
+
   return (
     <div className={showMenu ? styles._dropMenu : styles._menu}>
       <button className={styles._title} onClick={() => actionMenu()}>
-        <p>{t(`${title}`)}</p>
+        <p>{t(`${menu.title}`)}</p>
         <span className={showMenu ? styles._hidden : styles._chevronDown}>
           <Icon icon="mdi:chevron-down" color="white" width={28} />
         </span>
@@ -33,7 +36,7 @@ const DropMenu: FC<Props> = ({title, packs}) => {
         </span>
       </button>
       <div className={showMenu ? styles._content : styles._hidden}>
-        {packs?.map((pack, index) => (
+        {menu.packs?.map((pack, index) => (
           <a
             key={pack.name}
             className={styles._packs}
