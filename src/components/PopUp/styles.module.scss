@@ -109,6 +109,10 @@
   display: none;
 }
 
+._lineBreak{
+  display: flex;
+}
+
 @include responsive(lg){
   ._popup{
     width: 20rem;
