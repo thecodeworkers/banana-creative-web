@@ -103,9 +103,9 @@ const Process = forwardRef<HTMLDivElement>((data: any, ref) => {
 
   return (
     <>
-      <div ref={ref} className={styles._title}>
+      <h2 ref={ref} className={styles._title}>
         {t(data?.title[0])}<br className={styles._lineBreak}/>{t(data?.title[1])}
-      </div>
+      </h2>
       <div
         ref={sliderRef}
         className={[styles._sliderContainer, "keen-slider"].join(" ")}

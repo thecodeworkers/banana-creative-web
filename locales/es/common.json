@@ -1,6 +1,7 @@
 {
   "language": "ESP",
-  "metaDescription": "Banana Creative es un sello creativo enfocado en crear universos visuales y funcionales para comunicar propósitos reales",
+  "metatitle": "Banana Creative | Le damos forma a tus ideas | Agencia Creativa",
+  "metaDescription": "Banana Creative es más que agencia creativa. Contamos con servicios de diseño, desarrollo web, motion graphics y producciones audiovisuales",
   "processTitle": "Proceso",
   "servicesTitle": "Servicios",
   "contactTitle": "Contacto",
@@ -12,7 +13,7 @@
   "newsletterDisclaimerLine1": "Al enviar tu información también estarás aceptando recibir correos y notificaciones de nosotros! ",
   "newsletterDisclaimerLine2": "También tendrás la opción de darte de baja en cualquier momento.",
   "discountButtonText": "¡Sí! Quiero mi descuento",
-  "requiredEmail": "Campo requerido",
+  "requiredField": "Campo requerido",
   "invalidEmail": "Ingrese un formato válido, por ejemplo email@gmail.com",
   "weShape": "Le damos forma a ",
   "toNewLevel": "tus ideas, creando marcas",

@@ -22,6 +22,8 @@ const Contact = forwardRef<HTMLDivElement>((props: any, ref) => {
     window.open(`https://wkf.ms/442Kkju`);
   };
 
+  const validationMessages = [t(props.validation[0]), t(props.validation[1])]
+
   const [form, animateForm] = useAnimate();
   const [haveProject, animateProject] = useAnimate();
 
@@ -32,8 +34,8 @@ const Contact = forwardRef<HTMLDivElement>((props: any, ref) => {
     errors,
     resetForm,
     touched,
-    setTouched,
-  } = FormikConfig(handleSubmit);
+    setTouched
+  } = FormikConfig(handleSubmit, validationMessages);
 
   const handleOnTouched = (key: string) => {
     setTouched({ ...touched, [key]: true });

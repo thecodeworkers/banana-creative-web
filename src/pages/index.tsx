@@ -33,24 +33,23 @@ export default function Home() {
     contact: contactRef,
   };
 
-  console.log(data.metadata)
-
   return (
     <>
       <Head>
-        <title>{data?.metadata?.title}</title>
+        <title>{t(data?.metadata?.title)}</title>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=2"
         />
         <meta
           name="description"
-          content="Banana Creative is a creative label focused on creating visual and functional universes to communicate real purposes"
+          content="Banana Creative is a creative agency focused on creating visual and functional universes to communicate real purposes"
           key="desc"
         />
         <link rel="icon" type="image/x-icon" href="/favicon.ico"></link>
-        <meta property="og:title" content={data?.metadata?.title} />
-        <meta property="og:description" content="Banana Creative is a creative label focused on creating visual and functional universes to communicate real purposes" />
+        <meta property="og:title" content={t(data?.metadata?.title)} />
+        <meta property="og:description" content="Banana Creative is a creative agency focused on creating visual and functional universes to communicate real purposes" />
         <meta property="og:image" content={data?.metadata.ogImage} />
         <meta property="og:url" content={`${router.route}`} />
       </Head>
@@ -66,11 +65,11 @@ export default function Home() {
 
         <VideoPlayer video={data?.video} />
 
+        <Services {...data?.services} ref={servicesRef} />
+
         <Process {...data?.process} ref={processRef} />
 
         <SliderBanner data={data?.sliderBanner} />
-
-        <Services {...data?.services} ref={servicesRef} />
 
         <Testimonials data={data?.testimonials} />
 

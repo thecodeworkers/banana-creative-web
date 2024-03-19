@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 export const emailRegex =
   /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
-export const FormikConfig = (handleSubmit: any) =>
+export const FormikConfig = (handleSubmit: any, messages: string[]) =>
   useFormik({
     initialValues: {
       company: '',
@@ -13,11 +13,11 @@ export const FormikConfig = (handleSubmit: any) =>
     },
 
     validationSchema: Yup.object({
-      company: Yup.string().required('Campo requerido'),
+      company: Yup.string().required(messages[0]),
       email: Yup.string()
-        .required('Campo requerido')
-        .matches(emailRegex, 'Ingrese un formato válido, por ejemplo email@gmail.com'),
-      subject: Yup.string().required('Campo requerido'),
+        .required(messages[0])
+        .matches(emailRegex, messages[1]),
+      subject: Yup.string().required(messages[0]),
     }),
 
     onSubmit: (values) => {

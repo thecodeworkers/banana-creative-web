@@ -5,13 +5,20 @@
   justify-content: flex-start;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 12rem;
+  margin-top: 8rem;
+  margin-bottom: 4rem;
 }
 
 ._title {
   color: $white;
   font-family: $editorialItalic;
   font-size: 1.875rem;
+  font-weight: 400;
+}
+
+._linkTitle{
+  font-size: 4rem;
+  font-weight: 400;
 }
 
 ._link {

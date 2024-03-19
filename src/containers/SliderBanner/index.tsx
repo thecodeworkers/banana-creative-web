@@ -20,7 +20,7 @@ const SliderBanner = ({ data }: data) => {
   const [current, setCurrent] = useState(0);
 
   const goTo = (subdomain: string) => {
-    window.open(`https://${subdomain}.bananacreative.io`)
+    window.open(`https://${subdomain}.bananacreative.io`, 'noopener,noreferrer,nofollow')
   }
 
   const slidesArr = data?.map((pack, index) => (
