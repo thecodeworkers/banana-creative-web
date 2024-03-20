@@ -42,7 +42,7 @@ const DropMenu: FC<Props> = ({ title, packs }) => {
             className={styles._packs}
             href={`https://${pack.subdomain}.bananacreative.io`}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
           >
             {pack.name}
           </a>

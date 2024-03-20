@@ -1,6 +1,7 @@
 {
   "language": "ENG",
-  "metaDescription": "Banana Creative is a creative label focused on creating visual and functional universes to communicate real purposes",
+  "metatitle": "Banana Creative | We shape your ideas | Creative Agency",
+  "metaDescription": "Banana Creative is more than a creative agency. We provide services in graphic design, web development, motion graphics, media productions, comms & strategy",
   "processTitle": "Process",
   "servicesTitle": "Services",
   "contactTitle": "Contact",
@@ -12,7 +13,7 @@
   "newsletterDisclaimerLine1": "By submitting your information you will also be agreeing to receive emails and notifications from us! ",
   "newsletterDisclaimerLine2": "You will also have the option of opt out at any time",
   "discountButtonText": "Yes, i want a discount!",
-  "requiredEmail": "Required field",
+  "requiredField": "Required field",
   "invalidEmail": "Please enter a valid format, for example email@gmail.com",
   "weShape": "We shape your vision ",
   "toNewLevel": "to a new level, creating",
