@@ -3,12 +3,14 @@ import styles from "./styles.module.scss";
 import { useKeenSlider } from "keen-slider/react";
 import Image from "next/image";
 import { GeneralButton } from "@/components";
-import { ArrowLeft, ArrowRight } from "../../../public/resources/svg";
+import useTranslation from "next-translate/useTranslation";
 
 type pack = {
   alt: string;
   desktop: string;
   mobile: string;
+  desktopEsp: string;
+  mobileEsp: string;
   subdomain: string;
 };
 
@@ -18,23 +20,25 @@ type data = {
 
 const SliderBanner = ({ data }: data) => {
   const [current, setCurrent] = useState(0);
+  const { t } = useTranslation("common");
+  const ENG: Boolean = (t("language") === "ENG")
 
   const goTo = (subdomain: string) => {
-    window.open(`https://${subdomain}.bananacreative.io`)
+    window.open(`https://${subdomain}.bananacreative.io`, 'noopener,noreferrer,nofollow')
   }
 
   const slidesArr = data?.map((pack, index) => (
     <div key={index} className={[styles._slide, "keen-slider__slide"].join(" ")}>
       <div className={styles._image}>
-        <Image src={pack?.desktop} alt={pack?.alt} fill />
+        <Image src={ENG ? pack?.desktop : pack?.desktopEsp} alt={pack?.alt} fill />
       </div>
       <div className={styles._imageMobile}>
-        <Image src={pack?.mobile} alt={pack?.alt} fill />
+        <Image src={ENG ? pack?.mobile : pack?.mobileEsp} alt={pack?.alt} fill />
       </div>
 
       <div className={styles._button}>
         <GeneralButton
-          text="Pricing"
+          text={t("pricing")}
           method={()=>goTo(pack?.subdomain)}
         />
       </div>

@@ -12,7 +12,7 @@ const Clients = ({clients}: Clients) => {
 
     const clientIteration = (arrStart: number, arrEnd: number) => {
        const JSX = clients?.slice(arrStart, arrEnd).map((client, index)=>(
-            <span key={index} className={styles._image}><Image priority alt={`client${index}`} src={client} fill/></span>
+            <span key={index} className={styles._image}><Image priority alt={`${client} Logo`} src={`/resources/clients/${client}.svg`} fill/></span>
         ));
         return JSX
     }

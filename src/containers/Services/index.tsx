@@ -43,16 +43,16 @@ const Services = forwardRef<HTMLDivElement>((data: any, ref) => {
 
   return (
     <div ref={ref} className={styles._serviceContainer}>
-      <div className={styles._title}>{t(data?.title)}</div>
+      <h1 className={styles._title}>{t(data?.title)}</h1>
       {data?.dataArr.map((service: service, index: number) => (
         <Link
           key={index}
           href={`https://${service.subdomain}.bananacreative.io`}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer nofollow"
           className={styles._link}
         >
-          {service.name}
+          <h2 className={styles._linkTitle}>{service.name}</h2>
           <div className={style(service.subdomain)}>
             <div className={styles._image}>
               <Image alt={service.name} src={service.image} fill />
