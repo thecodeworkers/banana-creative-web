@@ -47,5 +47,10 @@
   "company": "Company o Startup*",
   "email": "Email*",
   "message": "Message*",
-  "socials": "You can follow us at:"
+  "socials": "You can follow us at:",
+  "pricing": "Pricing",  
+  "getInTouch": "Get in Touch",
+  "bookaCall": "Book A Call",
+  "send": "Send"
+
 }

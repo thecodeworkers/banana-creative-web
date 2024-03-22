@@ -68,10 +68,10 @@ const Contact = forwardRef<HTMLDivElement>((props: any, ref) => {
               <p className={styles._haveProjectText}>{t(props?.gotTitle)}</p>
               <div className={styles._haveProjectButtons}>
                 <div className={styles._button}>
-                  <GeneralButton text={props?.touchButton} ignoreTheme method={toForm} />
+                  <GeneralButton text={t(props?.touchButton)} ignoreTheme method={toForm} />
                 </div>
                 <div className={styles._button}>
-                  <GeneralButton method={() => bookACall()} ignoreTheme text={props?.callButton} />
+                  <GeneralButton method={() => bookACall()} ignoreTheme text={t(props?.callButton)} />
                 </div>
               </div>
             </div>
@@ -122,7 +122,7 @@ const Contact = forwardRef<HTMLDivElement>((props: any, ref) => {
                 ))}
 
                 <div className={styles._buttonContainer}>
-                  <GeneralButton method={handleSubmit} text={props?.sendButton} ignoreTheme/>
+                  <GeneralButton method={handleSubmit} text={t(props?.sendButton)} ignoreTheme/>
                 </div>
               </form>
               <div>
