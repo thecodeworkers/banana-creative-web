@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>{t(data?.metadata?.title)}</title>
+        <title>{t(data?.metadata?.description)}</title>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta
           name="viewport"
@@ -44,12 +44,12 @@ export default function Home() {
         />
         <meta
           name="description"
-          content="Banana Creative is a creative agency focused on creating visual and functional universes to communicate real purposes"
+          content={t(data?.metadata?.description)}
           key="desc"
         />
         <link rel="icon" type="image/x-icon" href="/favicon.ico"></link>
         <meta property="og:title" content={t(data?.metadata?.title)} />
-        <meta property="og:description" content="Banana Creative is a creative agency focused on creating visual and functional universes to communicate real purposes" />
+        <meta property="og:description" content={t(data?.metadata?.title)} />
         <meta property="og:image" content={data?.metadata.ogImage} />
         <meta property="og:url" content={`${router.route}`} />
       </Head>
