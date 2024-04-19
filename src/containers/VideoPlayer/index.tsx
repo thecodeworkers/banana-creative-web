@@ -50,7 +50,7 @@ const VideoPlayer: FC<Props> = ({ video }) => {
           className={styles._videoDesktop}
         >
           <Vimeo
-            video="892395591"
+            video="936419357"
             autoplay
             muted={true}
             loop={true}
@@ -62,7 +62,7 @@ const VideoPlayer: FC<Props> = ({ video }) => {
         </motion.div>
       <div className={styles._videoMobile}>
         <Vimeo
-          video="892395591"
+          video="936419357"
           autoplay
           muted={true}
           loop={true}

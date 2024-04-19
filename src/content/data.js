@@ -112,22 +112,22 @@ const data = {
     title: "services",
     dataArr: [
       {
-        name: "DESIGN",
+        name: "serviceDesign",
         image: "/resources/services/brand.jpg",
         subdomain: "design",
       },
       {
-        name: "MOTION GRAPHICS",
+        name: "serviceMotion",
         image: "/resources/services/motion.jpg",
         subdomain: "motion",
       },
       {
-        name: "TECHNOLOGY",
+        name: "serviceTech",
         image: "/resources/services/tech.jpg",
         subdomain: "tech",
       },
       {
-        name: "PRODUCTIONS",
+        name: "serviceProd",
         image: "/resources/services/prod.jpg",
         subdomain: "prod",
       },
