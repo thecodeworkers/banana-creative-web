@@ -52,7 +52,7 @@ const Services = forwardRef<HTMLDivElement>((data: any, ref) => {
           rel="noopener noreferrer nofollow"
           className={styles._link}
         >
-          <h2 className={styles._linkTitle}>{service.name}</h2>
+          <h2 className={styles._linkTitle}>{t(service.name)}</h2>
           <div className={style(service.subdomain)}>
             <div className={styles._image}>
               <Image alt={service.name} src={service.image} fill />
