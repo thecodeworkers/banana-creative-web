@@ -55,10 +55,11 @@
 
 ._text1 {
   font-family: $helveticaLight;
-  max-width: 17.5rem;
+  max-width: 12.5rem;
   position: absolute;
   top: 32.5%;
   left: 50%;
+  font-size: 1.875rem;
 }
 
 ._titleOver2 {
@@ -89,9 +90,10 @@
 
 ._text2 {
   font-family: $helveticaLight;
-  max-width: 23rem;
+  max-width: 25rem;
   position: absolute;
   top: 20%;
+  font-size: 1.875rem;
 }
 
 ._titleOver3 {
@@ -120,10 +122,11 @@
 
 ._text3 {
   font-family: $helveticaLight;
-  max-width: 20.75rem;
+  max-width: 25.5rem;
   position: absolute;
   top: 60%;
-  left: 70%;
+  left: 65%;
+  font-size: 1.875rem;
 }
 
 ._circle {
@@ -360,7 +363,7 @@
     font-size: 0.875rem;
     max-width: 14.5rem;
     top: 55%;
-    left: 15.5%;
+    left: 20%;
     text-align: center;
   }
 
