@@ -22,6 +22,7 @@ const data = {
     buttonText: "discountButtonText",
     requiredEmail: "requiredField",
     invalidEmail: "invalidEmail",
+    success: "popUpSuccess"
   },
   navbar: {
     image: "/resources/header/logo.svg",
@@ -55,7 +56,6 @@ const data = {
       "comms",
     ],
   },
-  video: "/resources/testGif.gif",
   process: {
     title: [
       "processDivTitleHalf",

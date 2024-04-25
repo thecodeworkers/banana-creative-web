@@ -15,6 +15,7 @@ type Info = {
   buttonText: string;
   requiredEmail: string,
   invalidEmail: string,
+  success: string
 };
 
 const SUBMIT_FORM = gql`
@@ -34,13 +35,19 @@ const SUBMIT_FORM = gql`
 const PopUp = (info: Info) => {
   const { t } = useTranslation("common");
   const [show, setShow] = useState(true);
-  const [check, setCheck] = useState(false)
+  const [success, setSuccess] = useState(false);
+  const [check, setCheck] = useState(false);
+  const [notChecked, setNotChecked] = useState(false)
   const [submitForm, { data, loading, error }] = useMutation(SUBMIT_FORM);
 
   const handleSubmit = () => {
+    if (!check){
+      setNotChecked(!notChecked);
+      return
+    }
     if (Object.keys(errors).length < 1 && values?.email && check) {
-      submitForm({ variables: { email: values.email } })
-        .then(() => setShow(!show))
+      submitForm({ variables: { email: values.email } }).then(() => setSuccess(!success))
+        .then(() => setTimeout(() => setShow(!show), 2000))
         .catch((error) => console.log(error));
     }
   };
@@ -114,6 +121,7 @@ const PopUp = (info: Info) => {
                     {t(info?.checkboxDisclaimer[0])}
                     <br className={styles._lineBreak} />
                     {t(info?.checkboxDisclaimer[1])}
+                    <span className={ notChecked ? styles._asterisks : styles._hidden }>&#42;&#42;&#42;</span>
                   </p>
                 </div>
               </div>
@@ -127,6 +135,7 @@ const PopUp = (info: Info) => {
                 />
               </button>
             </form>
+            <p className={success ? styles._submitSuccess : styles._hidden}>{t(info?.success)}</p>
           </div>
         </div>
       </div>

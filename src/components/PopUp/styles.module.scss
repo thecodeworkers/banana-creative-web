@@ -15,8 +15,8 @@
   z-index: 2;
   background: $lavender;
   width: 40rem;
-  height: 75vh;
-  top: 6.25rem;
+  height: 77.5vh;
+  top: 5rem;
   left: 30vw;
   margin: auto;
   padding: 2rem 0;
@@ -50,11 +50,16 @@
 }
 
 ._checkbox {
+  margin-right: 0.5rem;
   width: 0.9375rem;
   height: 0.9375rem;
-  margin-right: 0.5rem;
   cursor: pointer;
   background-color: $lavender;
+}
+
+._asterisks{
+  color: red;
+  font-size: 1rem;
 }
 
 ._close {
@@ -79,7 +84,7 @@
 
 ._input {
   width: 90%;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 ._inputText{
@@ -98,6 +103,13 @@
   height: 2.5rem;
   text-align: flex-start;
   cursor: pointer;
+}
+
+._submitSuccess{
+  font-family: $helveticaLight;
+  text-align: center;
+  font-weight: bold;
+  color: $black;
 }
 
 ._arrow{
@@ -160,7 +172,7 @@
     margin: 0rem;
   }
 
-  ._lineBreak{
-    display: none;
-  }
+  // ._lineBreak{
+  //   display: none;
+  // }
 }

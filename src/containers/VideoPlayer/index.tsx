@@ -3,11 +3,7 @@ import styles from "./styles.module.scss";
 import { useScroll, useTransform, motion } from "framer-motion";
 import Vimeo from "@u-wave/react-vimeo";
 
-type Props = {
-  video: string;
-};
-
-const VideoPlayer: FC<Props> = ({ video }) => {
+const VideoPlayer: FC = () => {
   const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({

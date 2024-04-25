@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>{t(data?.metadata?.description)}</title>
+        <title>{t(data?.metadata?.title)}</title>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta
           name="viewport"
@@ -63,7 +63,7 @@ export default function Home() {
       <main className={styles._main}>
         <Hero action={contactRef} text={data?.hero} />
 
-        <VideoPlayer video={data?.video} />
+        <VideoPlayer />
 
         <Services {...data?.services} ref={servicesRef} />
 
