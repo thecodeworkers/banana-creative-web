@@ -22,6 +22,10 @@ const Contact = forwardRef<HTMLDivElement>((props: any, ref) => {
     window.open(`https://wkf.ms/442Kkju`);
   };
 
+  const goToWhatsApp = () => {
+    window.open(`https://api.whatsapp.com/send?phone=${props?.phone}&text=%C2%A1Hola!%20Estuve%20revisando%20su%20web%20y%20me%20encantar%C3%ADa%20desarrollar%20un%20proyecto%C2%A0con%C2%A0ustedes.`);
+  };
+
   const validationMessages = [t(props.validation[0]), t(props.validation[1])]
 
   const [form, animateForm] = useAnimate();
@@ -68,7 +72,7 @@ const Contact = forwardRef<HTMLDivElement>((props: any, ref) => {
               <p className={styles._haveProjectText}>{t(props?.gotTitle)}</p>
               <div className={styles._haveProjectButtons}>
                 <div className={styles._button}>
-                  <GeneralButton text={t(props?.touchButton)} ignoreTheme method={toForm} />
+                  <GeneralButton text={t(props?.touchButton)} ignoreTheme method={()=>goToWhatsApp()} />
                 </div>
                 <div className={styles._button}>
                   <GeneralButton method={() => bookACall()} ignoreTheme text={t(props?.callButton)} />
