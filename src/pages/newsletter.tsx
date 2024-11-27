@@ -12,7 +12,7 @@ const URL = "https://api.bananacreative.tech/api/users/subscribe";
 
 export default function Newsletter() {
   const [isLoading, setIsLoading] = useState(false);
-  
+
   const router = useRouter();
   const { t } = useTranslation("common");
 
@@ -27,18 +27,18 @@ export default function Newsletter() {
         /BlackBerry/i,
         /Windows Phone/i,
       ];
-      return toMatch.some(toMatchItem =>
+      return toMatch.some((toMatchItem) =>
         navigator.userAgent.match(toMatchItem)
       );
     };
 
     const isMobile = detectMob();
 
-    if (!isMobile && router.pathname === '/newsletter') {
-      router.replace('/');
+    if (!isMobile && router.pathname === "/newsletter") {
+      router.replace("/");
       return;
     }
-  }, [router])
+  }, [router]);
 
   const handleOnTouched = (key: string) => {
     setTouched({ ...touched, [key]: true });
@@ -62,7 +62,7 @@ export default function Newsletter() {
         if (json) {
           toast.success("Registrado exitosamente");
           setIsLoading(false);
-          resetForm()
+          resetForm();
         }
       }
     } catch (e) {
@@ -90,13 +90,17 @@ export default function Newsletter() {
 
   return (
     <>
-      <Toaster />
+      <Toaster
+        toastOptions={{
+          className: styles._toast,
+        }}
+      />
       <Head>
         <title>{t(data?.metadata?.title)}</title>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=2"
+          content="width=device-width, initial-scale=1, maximum-scale=1"
         />
         <meta
           name="description"
@@ -158,11 +162,7 @@ export default function Newsletter() {
               />
             </div>
 
-            <button
-              type="submit"
-              className={styles._button}
-              // onClick={handleSubmit}
-            >
+            <button type="submit" className={styles._button}>
               {isLoading ? (
                 <span className={styles._loader}></span>
               ) : (
