@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { GeneralInput } from "@/components";
 import { FormikConfig } from "@/components/NewsletterForm/formik";
@@ -8,18 +8,41 @@ import useTranslation from "next-translate/useTranslation";
 import styles from "./styles.module.scss";
 import data from "../content/data";
 
-const URL = "http://localhost:5002/api/users/subscribe";
+const URL = "https://api.bananacreative.tech/api/users/subscribe";
 
 export default function Newsletter() {
   const [isLoading, setIsLoading] = useState(false);
-
+  
+  const router = useRouter();
   const { t } = useTranslation("common");
+
+  useEffect(() => {
+    const detectMob = () => {
+      const toMatch = [
+        /Android/i,
+        /webOS/i,
+        /iPhone/i,
+        /iPad/i,
+        /iPod/i,
+        /BlackBerry/i,
+        /Windows Phone/i,
+      ];
+      return toMatch.some(toMatchItem =>
+        navigator.userAgent.match(toMatchItem)
+      );
+    };
+
+    const isMobile = detectMob();
+
+    if (!isMobile && router.pathname === '/newsletter') {
+      router.replace('/');
+      return;
+    }
+  }, [router])
 
   const handleOnTouched = (key: string) => {
     setTouched({ ...touched, [key]: true });
   };
-
-  const router = useRouter();
 
   const handleSubmit = async () => {
     try {
