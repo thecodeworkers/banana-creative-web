@@ -14,6 +14,99 @@
     position: relative;
 }
 
+._mainNewsletter {
+    background-image: url('/resources/Cabezas.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+._formContainer {
+    background-color: #FFF;
+    padding: 1.5rem;
+    width: 85%;
+    border-radius: 1rem;
+}
+
+._button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background-color: #E93EF8;
+    border-radius: 0.3rem;
+    font-family: "DM Mono", monospace;
+    font-weight: 400;
+    color: $white;
+    width: 13rem;
+    height: 2.5rem;
+    text-align: center;
+    cursor: pointer;
+    margin: auto;
+    border: none;
+}
+
+._input {
+    margin-bottom: 2rem;
+}
+
+._input > div {
+    margin-bottom: 1rem;
+}
+
+._input > p {
+    margin-bottom: 1.5rem;
+}
+
+._title {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2.5rem;
+    color: #131313;
+    margin-bottom: 0.5rem;
+}
+
+._subtitle {
+    margin-bottom: 1rem;
+    color: #898989;
+    font-family: "DM Mono", monospace;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.01rem;
+}
+
+._inputText::placeholder {
+    color: #E93EF8;
+    font-family: "DM Mono", monospace;
+    font-weight: 400;
+
+}
+
+._loader {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 @include responsive(lg) {
     ._main {
         width: 100%;
